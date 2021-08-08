@@ -22,30 +22,30 @@ body {
 }
 
 .matrix {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  background-color: black;
   margin: auto;
   height: auto;
   width: auto;
 }
 
 .inmatrixComponent {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   padding: 0;
   margin: 0;
-  font-size: 50px;
+  font-size: 80px;
   font-family: "Source Code Pro", monospace;
 }
 
 .block {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   padding: 0;
   border-width: 0;
-  border-color: yellow;
   display: inline-block;
   line-height: 40px;
   word-spacing: 0;
-  height: 50;
-  width: 50;
+  height: 80;
+  width: 80;
   color: #282828;
 }
 
@@ -57,7 +57,9 @@ body {
   border-style: solid;
   border-color: #5050ff;
   border-width: 1;
-  width: 800;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin: auto;
   padding: 20px;
 }
