@@ -35,7 +35,6 @@ body {
   margin: 0;
   font-size: 50px;
   font-family: "Source Code Pro", monospace;
-  color: #282828;
 }
 
 .block {
@@ -47,6 +46,11 @@ body {
   word-spacing: 0;
   height: 50;
   width: 50;
+  color: #282828;
+}
+
+.r0c0 {
+  color: #5050ff;
 }
 
 .frame {
@@ -56,6 +60,5 @@ body {
   width: 800;
   margin: auto;
   padding: 20px;
-  color: blue;
 }
 /*# sourceMappingURL=styles.css.map */

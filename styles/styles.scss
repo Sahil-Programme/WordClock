@@ -30,7 +30,7 @@ body {
   margin: 0;
   font-size: 50px;
   font-family: "Source Code Pro", monospace;
-  color: rgb(40, 40, 40);
+  //color: rgb(40, 40, 40);
 }
 .block {
   padding: 0;
@@ -41,6 +41,10 @@ body {
   word-spacing: 0;
   height: 50;
   width: 50;
+  color: rgb(40, 40, 40);
+}
+.r0c0 {
+  color: rgb(80, 80, 255);
 }
 .frame {
   border-style: solid;
@@ -49,5 +53,4 @@ body {
   width: 800;
   margin: auto;
   padding: 20px;
-  color: blue;
 }

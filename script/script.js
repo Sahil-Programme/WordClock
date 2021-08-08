@@ -25,7 +25,7 @@ var wordMatrix =
 var str = "<div><h1 class=\"inmatrixComponent\">";
 for(var x = 0;x < 16; x++){
     for(var y = 0;y < 16; y++){
-        str += '<span class="block">'+wordMatrix[x][y]+'</span>';        
+        str += '<span class="block'+' r' + x.toString(10) + 'c' + y.toString(10) + '"' + '>' + wordMatrix[x][y]+'</span>';        
     }
     str += '<br>';
 }
