@@ -1,25 +1,17 @@
 var wordMatrix = 
-["HHAPPYLBIRTHDAYT"
-,"FJKXCHARLYUIWZTV"
-,"ITVISYTWENTYHALF"
-,"ONELEVENINETEENC"
-,"TWELVESIXTEENTEN"
-,"THIRTEENEIGHTEEN"
-,"FOURTEENTWOVFIVE"
-,"QUARTERSEVENTEEN"
-,"THREEHPASTOUFIVE"
-,"FOURTWELVEIGHTEN"
-,"NINEFIVESIXTHREE"
-,"TWONELEVENSEVENT"
-,"OCLOCKFINATHESTX"
-,"EVENINGAFTERNOON"
-,"MORNINGNIGHTIAND"
-,"COOLCOLDWARMHOTV"];
+["HHAPPYLBIRTHDAYTFJKXCHARLYUIWZTV"
+,"ITVISYTWENTYHALFONELEVENINETEENC"
+,"TWELVESIXTEENTENTHIRTEENEIGHTEEN"
+,"FOURTEENTWOVFIVEQUARTERSEVENTEEN"
+,"THREEHPASTOUFIVEFOURTWELVEIGHTEN"
+,"NINEFIVESIXTHREETWONELEVENSEVENT"
+,"OCLOCKFINATHESTXEVENINGAFTERNOON"
+,"MORNINGNIGHTIANDCOOLCOLDWARMHOTV"];
 
-var str = "<div><h1 class=\"inmatrixComponent\">";
+var str = "<div><h1>";
 
-for(var x = 0;x < 16; x++){
-    for(var y = 0;y < 16; y++){
+for(var x = 0;x < 8; x++){
+    for(var y = 0;y < 32; y++){
         str += '<span class="block'+' r' + x.toString(10) + 'c' + y.toString(10) + '"' + '>' + wordMatrix[x][y]+'</span>';        
     }
     str += '<br>';
@@ -29,13 +21,12 @@ str += '</h1></div>'
 var div = document.getElementById('matrix');
 div.innerHTML = str;
 
-addToFrame(1,4,6);
-addToFrame(5,4,6);
-addToFrame(6,5,6);
-addToFrame(5,9,8);
-addToFrame(2,2,2);
-addToFrame(1,7,5);
-addToFrame(3,4,7);
+addToFrame(1,0,2);
+addToFrame(1,3,2);
+addToFrame(2,16,8);
+addToFrame(4,6,4);
+addToFrame(5,20,6);
+
 
 function addToFrame(row,col,length) {
     var styles = '';
