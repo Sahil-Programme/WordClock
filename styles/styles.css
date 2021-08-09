@@ -21,6 +21,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-bottom: 2em;
 }
 
 .navbar h1 {
@@ -31,7 +32,7 @@ body {
   margin-bottom: 0em;
   font-size: 10em;
   font-family: "Source Code Pro", monospace;
-  color: #5e5e5e;
+  color: #646464;
 }
 
 .navbar h1 .spanC {
@@ -57,8 +58,8 @@ body {
   height: 50;
   width: 50;
   color: #282828;
-  -webkit-transition: color 0.1s;
-  transition: color 0.1s;
+  -webkit-transition: color 0.01s;
+  transition: color 0.01s;
 }
 
 .block:hover {
@@ -66,18 +67,12 @@ body {
 }
 
 .frame {
-  margin-right: 2em;
-  margin-left: 2em;
-  border-style: solid;
+  padding: 1em;
   border-color: #5050ff;
   border-width: 3;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  margin: auto;
-}
-
-.center {
   margin: auto;
 }
 /*# sourceMappingURL=styles.css.map */

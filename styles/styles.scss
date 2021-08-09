@@ -16,13 +16,14 @@ body {
 }
 .navbar {
   align-items: flex-start;
+  margin-bottom: 2em;
   h1 {
     width: fit-content;
     margin-left: 20px;
     margin-bottom: 0em;
     font-size: 10em;
     font-family: "Source Code Pro", monospace;
-    color: rgb(94, 94, 94);
+    color: rgb(100, 100, 100);
     .spanC {
       color: rgb(80, 80, 255);
     }
@@ -45,20 +46,15 @@ body {
   height: 50;
   width: 50;
   color: rgb(40, 40, 40);
-  transition: color 0.1s;
+  transition: color 0.01s;
 }
 .block:hover {
   color: rgb(80, 80, 255);
 }
 .frame {
-  margin-right: 2em;
-  margin-left: 2em;
-  border-style: solid;
+  padding: 1em;
   border-color: rgb(80, 80, 255);
   border-width: 3;
   width: max-content;
-  margin: auto;
-}
-.center {
   margin: auto;
 }
