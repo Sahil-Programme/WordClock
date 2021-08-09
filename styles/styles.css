@@ -12,7 +12,9 @@ body {
   width: fit-content;
   margin: auto;
   padding: 1em;
-  height: 1500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .navbar {
