@@ -5,8 +5,16 @@ body {
   text-align: center;
   color: white;
 }
+.content {
+  width: fit-content;
+  margin: auto;
+  padding: 1em;
+  height: 1500px;
+}
 .navbar {
+  align-items: flex-start;
   h1 {
+    width: fit-content;
     margin-left: 20px;
     margin-bottom: 0em;
     font-size: 10em;

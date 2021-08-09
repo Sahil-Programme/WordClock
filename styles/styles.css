@@ -6,7 +6,25 @@ body {
   color: white;
 }
 
+.content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 1em;
+  height: 1500px;
+}
+
+.navbar {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .navbar h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-left: 20px;
   margin-bottom: 0em;
   font-size: 10em;
