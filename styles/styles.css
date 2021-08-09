@@ -7,9 +7,6 @@ body {
 }
 
 .content {
-  border-color: blue;
-  border-width: 3;
-  border-style: solid;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
