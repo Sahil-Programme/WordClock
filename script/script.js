@@ -17,6 +17,7 @@ var wordMatrix =
 ,"COOLCOLDWARMHOTV"];
 
 var str = "<div><h1 class=\"inmatrixComponent\">";
+
 for(var x = 0;x < 16; x++){
     for(var y = 0;y < 16; y++){
         str += '<span class="block'+' r' + x.toString(10) + 'c' + y.toString(10) + '"' + '>' + wordMatrix[x][y]+'</span>';        
@@ -26,5 +27,29 @@ for(var x = 0;x < 16; x++){
 str += '</h1></div>'
 
 var div = document.getElementById('matrix');
-div.innerHTML += str;
+div.innerHTML = str;
+
+addToFrame(1,4,6);
+addToFrame(5,4,6);
+addToFrame(6,5,6);
+addToFrame(5,9,8);
+addToFrame(2,2,2);
+addToFrame(1,7,5);
+addToFrame(3,4,7);
+
+function addToFrame(row,col,length) {
+    var styles = '';
+    for(var x = col ; x < (col + length);x++)
+    {
+        styles +=  `.r`+row.toString(10)+`c` + x.toString(10) + ` {
+        color: rgb(80, 80, 255);
+      }`
+    }
+    var styleSheet = document.createElement("style")
+    styleSheet.innerText += styles
+    document.head.appendChild(styleSheet)
+}
+
+
+
 
