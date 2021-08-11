@@ -1,0 +1,24 @@
+* {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.navbar__container {
+  height: 80px;
+  background-color: #131313;
+  font-size: 2em;
+  color: blue;
+}
+.navbar__homeContainer {
+  display: inline-block;
+}
+.navbar__spaceInbetween {
+  display: inline-flex;
+}
+.navbar__about {
+  display: inline-block;
+}
+.navbar__contact {
+  display: inline-block;
+}
