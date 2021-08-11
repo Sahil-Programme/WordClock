@@ -9,11 +9,37 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <div class="navbar__container">
-      <div class="navbar__homeContainer">Home</div>
-      <div class="navbar__spaceInbetween"></div>
-      <div class="navbar__about">About</div>
-      <div class="navbar__contact">Contact</div>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo"><span>Word</span>Clock</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="about-page">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contact" class="navbar__links" id="contact-page"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+      <div class="hero__container">
+        <h1 class="hero__heading">Choose your <span>colors</span></h1>
+        <p class="hero__description">Unlimited Possibilities</p>
+        <button class="main__btn"><a href="#">Explore</a></button>
+      </div>
     </div>
 
     <script src="script/script.js"></script>
