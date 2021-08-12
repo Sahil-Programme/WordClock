@@ -78,23 +78,56 @@ ul {
   padding: 3em 0 2em 0;
 }
 
-.right-col .images-container {
+.right-col .carousel {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  width: 16.5em;
 }
 
-.right-col .card {
-  width: 20em;
-  height: 27.5em;
-  background: blue;
+.right-col .carousel .carousel-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: tranform 0.25;
+  transition: tranform 0.25;
+}
+
+.right-col .carousel .carousel-button {
+  background: teal;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  opacity: 0.25;
+  position: absolute;
+  -webkit-transition: opacity 0.25;
+  transition: opacity 0.25;
+  width: 1.5em;
+  height: 1.5em;
+  z-index: 1;
+}
+
+.right-col .carousel .previous {
+  left: 5px;
+}
+
+.right-col .carousel .next {
+  right: 5px;
+}
+
+.right-col .carousel .carousel-button:hover {
+  opacity: 0.5;
 }
 
 .right-col .cropped2 {
