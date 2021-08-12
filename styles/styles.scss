@@ -12,8 +12,10 @@ body {
 
 //navbar
 .navbar {
+    max-width: 1500px;
     background: #101010;
     padding: 1em;
+    margin: auto;
     .logo {
         text-decoration: none;
         font-weight: bold;
@@ -54,6 +56,8 @@ ul {
 }
 
 .left-col {
+    margin-top: auto;
+    margin-bottom: auto;
     .subhead {
         text-transform: uppercase;
         font-weight: bold;
@@ -67,50 +71,63 @@ ul {
     }
 }
 
+.left-col {
+    grid-area: rightcol;
+}
+
 .right-col {
-    background: #202020;
-    padding: 3em 0 2em 0;
-    .carousel {
-        //background-color: yellow;
-        align-items: center;
-        display: flex;
-        margin: 2rem auto;
-        overflow: hidden;
-        position: relative;
-        width: 16.5em;
-        .carousel-images {
-            display: flex;
-            transform: translateX(0);
-            transition: tranform 0.25;
-        }
-        .carousel-button {
-            background: teal;
-            border: 0;
-            border-radius: 50%;
-            color: white;
-            cursor: pointer;
-            font-size: 1.5em;
-            font-weight: bold;
-            opacity: 0.25;
-            position: absolute;
-            transition: opacity 0.25;
-            width: 1.5em;
-            height: 1.5em;
-            z-index: 1;
-        }
-        .previous {
-            left: 5px;
-        }
-        .next {
-            right: 5px;
-        }
-        .carousel-button:hover {
-            opacity: 0.5;
-        }
+    grid-area: leftcol;
+}
+
+.radio-input {
+    grid-area: input;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'rightcol leftcol'' rightcol input';
+}
+
+@media screen and (max-width: 40em) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 'rightcol'' leftcol' 'input';
     }
-    .cropped2 {
-        width: 16.5em;
-        height: 27.5em;
+}
+
+.right-col {
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
+    padding: 2em 0 2em 0;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    .crousel-container {
+        width: 20em;
+        height: 35em;
+        overflow: hidden;
+        display: block;
+        //background-color: cadetblue;
+        position: relative;
+    }
+    #card-Container {
+        position: absolute;
+        left: 0;
+        display: flex;
+        width: max-content;
+        transition: left 0.5s;
+    }
+    .card {
+        padding: 0;
+        margin: 0
+    }
+    .cropped {
+        display: inline-block;
+        //background-color: chartreuse;
+        transform: scale(1);
+        width: 20em;
+        height: 35em;
         object-fit: cover;
         object-position: 20% 50%;
     }

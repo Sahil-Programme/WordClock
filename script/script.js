@@ -1,25 +1,14 @@
-const carouselImages = document.querySelector('.carousel-images');
-const backButton = document.querySelector('.previous');
-const nextButton = document.querySelector('.next');
-const numberOfImages = document.querySelectorAll('.carousel-images img').length;
-let imageIndex = 1;
-let translateX = 0;
+let currentIndex = 0;
+const container = document.getElementById('card-Container');
 
+window.setInterval(update, 4000);
 
-
-nextButton.addEventListener('click', event => {
-    if (imageIndex != numberOfImages) {
-        imageIndex++;
-        translateX -= 16.5;
+function update() {
+    currentIndex++;
+    if (currentIndex == 4) {
+        currentIndex = 0;
     }
+    let x = -20 * currentIndex;
 
-    carouselImages.style.transform = `translateX(${translateX}em)`;
-});
-backButton.addEventListener('click', event => {
-    if (imageIndex != 1) {
-        imageIndex--;
-        translateX += 16.5;
-    }
-
-    carouselImages.style.transform = `translateX(${translateX}em)`;
-});
+    container.style.left = `${x}em`;
+}
