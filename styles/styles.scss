@@ -20,7 +20,7 @@ body {
         text-decoration: none;
         font-weight: bold;
         color: white;
-        font-size: 2em;
+        font-size: 1.2em;
         span {
             color: var(--primary-color);
         }
@@ -32,8 +32,8 @@ body {
         display: flex;
         place-content: space-between;
         img {
-            height: 2em;
-            width: 2em;
+            height: 1.2em;
+            width: 1.2em;
         }
     }
     .mobile-menu {
@@ -59,19 +59,16 @@ ul {
     margin: auto;
     .left-section {
         .hero__container {
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             height: 90%;
             text-align: center;
-            padding: 30px;
+            padding: 2em;
         }
         .hero__heading {
-            font-size: 100px;
-            margin-bottom: 24px;
+            font-size: 5em;
             color: #fff;
         }
         .hero__heading span {
@@ -80,52 +77,32 @@ ul {
         .hero__description {
             font-size: 60px;
         }
-    }
-    .grid-container {
-        display: grid;
-        grid-template-areas: 'rightcol' 'leftcol';
-    }
-    @media screen and (max-width: 40em) {
-        .grid-container {
-            display: grid;
-            grid-template-areas: 'rightcol'' leftcol';
+        @media only screen and (max-width: 500px) {
+            .hero__heading {
+                font-size: 3em;
+            }
+        }
+        @media only screen and (max-width: 300px) {
+            .hero__heading {
+                font-size: 2em;
+            }
         }
     }
     .right-section {
-        grid-area: leftcol;
-        display: flex;
-        margin: auto;
-        padding: 2em 0 2em 0;
-        height: fit-content;
-        align-items: center;
-        justify-content: center;
-        .crousel-container {
-            width: 25em;
-            height: 45em;
-            overflow: hidden;
-            display: block;
-            //background-color: cadetblue;
-            position: relative;
-        }
-        #card-Container {
+        background-color: darkorange;
+        max-width: 1300px;
+        max-width: 1300px;
+        height: 600px;
+        align-content: center;
+        position: relative;
+        .carousel-container {
             position: absolute;
-            left: 0;
-            display: flex;
-            width: max-content;
-            transition: left 0.5s;
-        }
-        .card {
-            padding: 0;
-            margin: 0
-        }
-        .cropped {
-            display: inline-block;
-            //background-color: chartreuse;
-            transform: scale(1);
-            width: 25em;
-            height: 45em;
-            object-fit: cover;
-            //object-position: 20% 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: cyan;
+            height: 500px;
+            width: 360px;
         }
     }
 }
