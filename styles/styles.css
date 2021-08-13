@@ -125,6 +125,10 @@ ul {
           transform: translate(-50%, -50%);
 }
 
+.hero .right-section .background-text h1 {
+  font-family: 'Source Code Pro' 'monospace';
+}
+
 .hero .right-section .carousel-container {
   position: absolute;
   top: 50%;
