@@ -8,7 +8,7 @@ function update() {
     if (currentIndex == 4) {
         currentIndex = 0;
     }
-    let x = -20 * currentIndex;
+    let x = -25 * currentIndex;
 
     container.style.left = `${x}em`;
 }

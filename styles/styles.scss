@@ -12,7 +12,7 @@ body {
 
 //navbar
 .navbar {
-    max-width: 1500px;
+    max-width: 1300px;
     background: #101010;
     padding: 1em;
     margin: auto;
@@ -20,7 +20,7 @@ body {
         text-decoration: none;
         font-weight: bold;
         color: white;
-        font-size: 1.2em;
+        font-size: 2em;
         span {
             color: var(--primary-color);
         }
@@ -32,8 +32,8 @@ body {
         display: flex;
         place-content: space-between;
         img {
-            height: 1.2em;
-            width: 1.2em;
+            height: 2em;
+            width: 2em;
         }
     }
     .mobile-menu {
@@ -52,83 +52,80 @@ ul {
 }
 
 .hero {
+    //background-color: rgb(109, 109, 109);
     text-align: center;
-}
-
-.left-col {
-    margin-top: auto;
-    margin-bottom: auto;
-    .subhead {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: grey;
-        letter-spacing: 0.3em;
+    max-width: 1300px;
+    place-content: space-between;
+    margin: auto;
+    .left-section {
+        .hero__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 90%;
+            text-align: center;
+            padding: 30px;
+        }
+        .hero__heading {
+            font-size: 100px;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+        .hero__heading span {
+            color: var(--primary-color);
+        }
+        .hero__description {
+            font-size: 60px;
+        }
     }
-    h1 {
-        font-size: 2.5em;
-        line-height: 1.3em;
-        margin-top: 0.2em;
-    }
-}
-
-.left-col {
-    grid-area: rightcol;
-}
-
-.right-col {
-    grid-area: leftcol;
-}
-
-.radio-input {
-    grid-area: input;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-areas: 'rightcol leftcol'' rightcol input';
-}
-
-@media screen and (max-width: 40em) {
     .grid-container {
         display: grid;
-        grid-template-areas: 'rightcol'' leftcol' 'input';
+        grid-template-areas: 'rightcol' 'leftcol';
     }
-}
-
-.right-col {
-    display: flex;
-    max-width: 1500px;
-    margin: auto;
-    padding: 2em 0 2em 0;
-    height: fit-content;
-    align-items: center;
-    justify-content: center;
-    .crousel-container {
-        width: 20em;
-        height: 35em;
-        overflow: hidden;
-        display: block;
-        //background-color: cadetblue;
-        position: relative;
+    @media screen and (max-width: 40em) {
+        .grid-container {
+            display: grid;
+            grid-template-areas: 'rightcol'' leftcol';
+        }
     }
-    #card-Container {
-        position: absolute;
-        left: 0;
+    .right-section {
+        grid-area: leftcol;
         display: flex;
-        width: max-content;
-        transition: left 0.5s;
-    }
-    .card {
-        padding: 0;
-        margin: 0
-    }
-    .cropped {
-        display: inline-block;
-        //background-color: chartreuse;
-        transform: scale(1);
-        width: 20em;
-        height: 35em;
-        object-fit: cover;
-        object-position: 20% 50%;
+        margin: auto;
+        padding: 2em 0 2em 0;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        .crousel-container {
+            width: 25em;
+            height: 45em;
+            overflow: hidden;
+            display: block;
+            //background-color: cadetblue;
+            position: relative;
+        }
+        #card-Container {
+            position: absolute;
+            left: 0;
+            display: flex;
+            width: max-content;
+            transition: left 0.5s;
+        }
+        .card {
+            padding: 0;
+            margin: 0
+        }
+        .cropped {
+            display: inline-block;
+            //background-color: chartreuse;
+            transform: scale(1);
+            width: 25em;
+            height: 45em;
+            object-fit: cover;
+            //object-position: 20% 50%;
+        }
     }
 }

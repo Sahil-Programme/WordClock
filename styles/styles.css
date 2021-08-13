@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-  max-width: 1500px;
+  max-width: 1300px;
   background: #101010;
   padding: 1em;
   margin: auto;
@@ -21,7 +21,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: white;
-  font-size: 1.2em;
+  font-size: 2em;
 }
 
 .navbar .logo span {
@@ -40,8 +40,8 @@ body {
 }
 
 .navbar .container img {
-  height: 1.2em;
-  width: 1.2em;
+  height: 2em;
+  width: 2em;
 }
 
 .navbar .mobile-menu {
@@ -60,64 +60,67 @@ ul {
 
 .hero {
   text-align: center;
+  max-width: 1300px;
+  place-content: space-between;
+  margin: auto;
 }
 
-.left-col {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.left-col .subhead {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: grey;
-  letter-spacing: 0.3em;
-}
-
-.left-col h1 {
-  font-size: 2.5em;
-  line-height: 1.3em;
-  margin-top: 0.2em;
-}
-
-.left-col {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: rightcol;
-}
-
-.right-col {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: leftcol;
-}
-
-.radio-input {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: input;
-}
-
-.grid-container {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "rightcol leftcol" " rightcol input";
-}
-
-@media screen and (max-width: 40em) {
-  .grid-container {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "rightcol" " leftcol" "input";
-  }
-}
-
-.right-col {
+.hero .left-section .hero__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1500px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 30px;
+}
+
+.hero .left-section .hero__heading {
+  font-size: 100px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.hero .left-section .hero__heading span {
+  color: var(--primary-color);
+}
+
+.hero .left-section .hero__description {
+  font-size: 60px;
+}
+
+.hero .grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'rightcol' 'leftcol';
+}
+
+@media screen and (max-width: 40em) {
+  .hero .grid-container {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "rightcol" " leftcol";
+  }
+}
+
+.hero .right-section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: leftcol;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: auto;
   padding: 2em 0 2em 0;
   height: -webkit-fit-content;
@@ -131,15 +134,15 @@ ul {
           justify-content: center;
 }
 
-.right-col .crousel-container {
-  width: 20em;
-  height: 35em;
+.hero .right-section .crousel-container {
+  width: 25em;
+  height: 45em;
   overflow: hidden;
   display: block;
   position: relative;
 }
 
-.right-col #card-Container {
+.hero .right-section #card-Container {
   position: absolute;
   left: 0;
   display: -webkit-box;
@@ -152,20 +155,18 @@ ul {
   transition: left 0.5s;
 }
 
-.right-col .card {
+.hero .right-section .card {
   padding: 0;
   margin: 0;
 }
 
-.right-col .cropped {
+.hero .right-section .cropped {
   display: inline-block;
   -webkit-transform: scale(1);
           transform: scale(1);
-  width: 20em;
-  height: 35em;
+  width: 25em;
+  height: 45em;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 20% 50%;
-     object-position: 20% 50%;
 }
 /*# sourceMappingURL=styles.css.map */
