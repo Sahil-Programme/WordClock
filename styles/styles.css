@@ -134,6 +134,7 @@ ul {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  background-color: #6982f3;
   height: 350px;
   width: 350px;
 }
