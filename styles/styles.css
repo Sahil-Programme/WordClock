@@ -117,6 +117,14 @@ ul {
   margin: 3em 0em;
 }
 
+.hero .right-section .background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .hero .right-section .carousel-container {
   position: absolute;
   top: 50%;
@@ -134,7 +142,6 @@ ul {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #6982f3;
   height: 350px;
   width: 350px;
 }

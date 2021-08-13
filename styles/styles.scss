@@ -98,6 +98,12 @@ ul {
         align-content: center;
         position: relative;
         margin: 3em 0em;
+        .background-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         .carousel-container {
             position: absolute;
             top: 50%;
@@ -107,13 +113,14 @@ ul {
             max-width: 1300px;
             overflow: hidden;
             position: relative;
+            //background-color: rgb(105, 130, 243);
         }
         .image-container {
             position: absolute;
             //left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgb(105, 130, 243);
+            //background-color: rgb(105, 130, 243);
             height: 350px;
             width: 350px;
             //overflow: hidden;
