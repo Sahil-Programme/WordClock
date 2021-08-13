@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #000;
+  background: #121512;
   margin: 0;
   scroll-behavior: smooth;
   font-family: sans-serif;
@@ -11,8 +11,14 @@ body {
 }
 
 .navbar {
-  background: #101010;
+  top: 0;
+  max-width: 1300px;
+  background: #202020;
   padding: 1em;
+  margin: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 999;
 }
 
 .navbar .logo {
@@ -58,84 +64,142 @@ ul {
 
 .hero {
   text-align: center;
+  max-width: 1300px;
+  place-content: space-between;
+  margin: auto;
 }
 
-.left-col .subhead {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: grey;
-  letter-spacing: 0.3em;
-}
-
-.left-col h1 {
-  font-size: 2.5em;
-  line-height: 1.3em;
-  margin-top: 0.2em;
-}
-
-.right-col {
-  background: #202020;
-  padding: 3em 0 2em 0;
-}
-
-.right-col .carousel {
+.hero .left-section .hero__container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 2rem auto;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 2em;
+}
+
+.hero .left-section .hero__heading {
+  font-size: 5em;
+  color: #fff;
+}
+
+.hero .left-section .hero__heading span {
+  color: var(--primary-color);
+}
+
+.hero .left-section .hero__description {
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 500px) {
+  .hero .left-section .hero__heading {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .hero .left-section .hero__heading {
+    font-size: 2em;
+  }
+}
+
+.hero .right-section {
+  max-width: 1300px;
+  height: 600px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+  margin: 3em 0em;
+}
+
+.hero .right-section .carousel-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 80vh;
+  max-width: 1300px;
   overflow: hidden;
   position: relative;
-  width: 16.5em;
 }
 
-.right-col .carousel .carousel-images {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: tranform 0.25;
-  transition: tranform 0.25;
-}
-
-.right-col .carousel .carousel-button {
-  background: teal;
-  border: 0;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  font-size: 1.5em;
-  font-weight: bold;
-  opacity: 0.25;
+.hero .right-section .image-container {
   position: absolute;
-  -webkit-transition: opacity 0.25;
-  transition: opacity 0.25;
-  width: 1.5em;
-  height: 1.5em;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #6982f3;
+  height: 350px;
+  width: 350px;
+}
+
+.hero .right-section .image-container .image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 430px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero .right-section .left-image {
+  left: 20%;
+}
+
+.hero .right-section .left-image .image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 275px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero .right-section .center-image {
+  left: 50%;
   z-index: 1;
 }
 
-.right-col .carousel .previous {
-  left: 5px;
+.hero .right-section .center-image .image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 385px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.right-col .carousel .next {
-  right: 5px;
+.hero .right-section .right-image {
+  left: 80%;
 }
 
-.right-col .carousel .carousel-button:hover {
-  opacity: 0.5;
+.hero .right-section .right-image .image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 275px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.right-col .cropped2 {
-  width: 16.5em;
-  height: 27.5em;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 20% 50%;
-     object-position: 20% 50%;
+@media only screen and (max-width: 400px) {
+  .hero .right-section {
+    margin: -2em 0em;
+  }
+  .hero .right-section .left-image .image {
+    width: 225px;
+  }
+  .hero .right-section .center-image .image {
+    width: 300px;
+  }
+  .hero .right-section .right-image .image {
+    width: 225px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
