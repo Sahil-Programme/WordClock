@@ -12,10 +12,13 @@ body {
 
 //navbar
 .navbar {
+    top: 0;
     max-width: 1300px;
-    background: #101010;
+    background: #202020;
     padding: 1em;
     margin: auto;
+    position: sticky;
+    z-index: 999;
     .logo {
         text-decoration: none;
         font-weight: bold;
@@ -89,20 +92,91 @@ ul {
         }
     }
     .right-section {
-        background-color: darkorange;
-        max-width: 1300px;
+        //background-color: darkorange;
         max-width: 1300px;
         height: 600px;
         align-content: center;
         position: relative;
+        margin: 3em 0em;
         .carousel-container {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: cyan;
-            height: 500px;
-            width: 360px;
+            height: 80vh;
+            max-width: 1300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .image-container {
+            position: absolute;
+            //left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            //background-color: rgb(105, 130, 243);
+            height: 350px;
+            width: 350px;
+            //overflow: hidden;
+            .image {
+                //background-color: darkorchid;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 430px;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .left-image {
+            left: 20%;
+            .image {
+                //background-color: darkorchid;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 275px;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .center-image {
+            left: 50%;
+            z-index: 1;
+            .image {
+                //background-color: darkorchid;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 385px;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .right-image {
+            left: 80%;
+            .image {
+                //background-color: darkorchid;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 275px;
+                transform: translate(-50%, -50%);
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            margin: -2em 0em;
+            .left-image {
+                .image {
+                    width: 225px;
+                }
+            }
+            .center-image {
+                .image {
+                    width: 300px;
+                }
+            }
+            .right-image {
+                .image {
+                    width: 225px;
+                }
+            }
         }
     }
 }

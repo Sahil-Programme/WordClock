@@ -11,10 +11,14 @@ body {
 }
 
 .navbar {
+  top: 0;
   max-width: 1300px;
-  background: #101010;
+  background: #202020;
   padding: 1em;
   margin: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 999;
 }
 
 .navbar .logo {
@@ -105,13 +109,12 @@ ul {
 }
 
 .hero .right-section {
-  background-color: darkorange;
-  max-width: 1300px;
   max-width: 1300px;
   height: 600px;
   -ms-flex-line-pack: center;
       align-content: center;
   position: relative;
+  margin: 3em 0em;
 }
 
 .hero .right-section .carousel-container {
@@ -120,8 +123,82 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: cyan;
-  height: 500px;
-  width: 360px;
+  height: 80vh;
+  max-width: 1300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero .right-section .image-container {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 350px;
+  width: 350px;
+}
+
+.hero .right-section .image-container .image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 430px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero .right-section .left-image {
+  left: 20%;
+}
+
+.hero .right-section .left-image .image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 275px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero .right-section .center-image {
+  left: 50%;
+  z-index: 1;
+}
+
+.hero .right-section .center-image .image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 385px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero .right-section .right-image {
+  left: 80%;
+}
+
+.hero .right-section .right-image .image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 275px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 400px) {
+  .hero .right-section {
+    margin: -2em 0em;
+  }
+  .hero .right-section .left-image .image {
+    width: 225px;
+  }
+  .hero .right-section .center-image .image {
+    width: 300px;
+  }
+  .hero .right-section .right-image .image {
+    width: 225px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
