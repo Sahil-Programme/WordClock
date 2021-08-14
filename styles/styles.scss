@@ -109,6 +109,8 @@ ul {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            max-width: 1300px;
+            overflow: hidden;
             h1 {
                 filter: blur(4px);
                 background-color: rgba(150, 150, 255, 0.10);
