@@ -2,10 +2,14 @@
   --primary-color: #007af3;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #000;
   margin: 0;
-  scroll-behavior: smooth;
+  overflow-y: scroll;
   font-family: sans-serif;
   color: white;
 }
@@ -27,7 +31,7 @@ body {
   margin: auto;
   position: -webkit-sticky;
   position: sticky;
-  z-index: 999;
+  z-index: 2000;
 }
 
 .navbar .logo {
@@ -78,7 +82,7 @@ ul {
   margin: auto;
 }
 
-.hero .left-section .hero__container {
+.hero .top-section .hero__container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -92,32 +96,32 @@ ul {
   padding: 2em;
 }
 
-.hero .left-section .hero__heading {
+.hero .top-section .hero__heading {
   font-size: 5em;
   color: #fff;
 }
 
-.hero .left-section .hero__heading span {
+.hero .top-section .hero__heading span {
   color: var(--primary-color);
 }
 
-.hero .left-section .hero__description {
+.hero .top-section .hero__description {
   font-size: 60px;
 }
 
 @media only screen and (max-width: 500px) {
-  .hero .left-section .hero__heading {
+  .hero .top-section .hero__heading {
     font-size: 3em;
   }
 }
 
 @media only screen and (max-width: 300px) {
-  .hero .left-section .hero__heading {
+  .hero .top-section .hero__heading {
     font-size: 2em;
   }
 }
 
-.hero .right-section {
+.hero .bottom-section {
   max-width: 1300px;
   height: 600px;
   -ms-flex-line-pack: center;
@@ -126,7 +130,7 @@ ul {
   margin: 2em 0em;
 }
 
-.hero .right-section .background-text {
+.hero .bottom-section .background-text {
   z-index: 1;
   margin: auto;
   position: absolute;
@@ -136,7 +140,7 @@ ul {
           transform: translate(-50%, -50%);
 }
 
-.hero .right-section .background-text h1 {
+.hero .bottom-section .background-text h1 {
   -webkit-filter: blur(4px);
           filter: blur(4px);
   background-color: rgba(150, 150, 255, 0.1);
@@ -147,11 +151,11 @@ ul {
   font-family: "Source Code Pro", monospace;
 }
 
-.hero .right-section .background-text h1 span {
+.hero .bottom-section .background-text h1 span {
   color: white;
 }
 
-.hero .right-section #carousel-container {
+.hero .bottom-section #carousel-container {
   z-index: 999;
   position: absolute;
   top: 50%;
@@ -164,84 +168,80 @@ ul {
   position: relative;
 }
 
-.hero .right-section .image-container {
+.hero .bottom-section .image-container {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 350px;
-  width: 350px;
 }
 
-.hero .right-section .image-container .image {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 430px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.hero .right-section .image-1 {
+.hero .bottom-section .image-1 {
   left: 20%;
   z-index: 500;
   -webkit-transition: left 0.5s;
   transition: left 0.5s;
 }
 
-.hero .right-section .image-1 .image {
+.hero .bottom-section .image-1 .crop {
+  width: 275px;
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 275px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.hero .right-section .image-2 {
+.hero .bottom-section .image-2 {
   left: 50%;
   z-index: 999;
   -webkit-transition: left 0.5s;
   transition: left 0.5s;
 }
 
-.hero .right-section .image-2 .image {
+.hero .bottom-section .image-2 .crop {
+  width: 385px;
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 385px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.hero .right-section .image-3 {
+.hero .bottom-section .image-3 {
   left: 80%;
   z-index: 500;
   -webkit-transition: left 1s;
   transition: left 1s;
 }
 
-.hero .right-section .image-3 .image {
+.hero .bottom-section .image-3 .crop {
+  width: 275px;
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 275px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 400px) {
-  .hero .right-section {
+  .hero .bottom-section {
     margin: -2em 0em;
   }
-  .hero .right-section .left-image .image {
+  .hero .bottom-section .left-image .image {
     width: 225px;
   }
-  .hero .right-section .center-image .image {
+  .hero .bottom-section .center-image .image {
     width: 300px;
   }
-  .hero .right-section .right-image .image {
+  .hero .bottom-section .right-image .image {
     width: 225px;
   }
+}
+
+.about {
+  height: 800px;
+  background-color: lightseagreen;
+  max-width: 1300px;
+  margin: auto;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,10 +2,14 @@
     --primary-color: #007af3;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #000;
     margin: 0;
-    scroll-behavior: smooth;
+    overflow-y: scroll;
     font-family: sans-serif;
     color: white;
 }
@@ -25,7 +29,7 @@ body {
     padding: 1em;
     margin: auto;
     position: sticky;
-    z-index: 999;
+    z-index: 2000;
     .logo {
         text-decoration: none;
         font-weight: bold;
@@ -67,7 +71,7 @@ ul {
     max-width: 1300px;
     place-content: space-between;
     margin: auto;
-    .left-section {
+    .top-section {
         .hero__container {
             justify-content: center;
             align-items: center;
@@ -98,7 +102,7 @@ ul {
             }
         }
     }
-    .right-section {
+    .bottom-section {
         max-width: 1300px;
         height: 600px;
         align-content: center;
@@ -139,25 +143,16 @@ ul {
             position: absolute;
             top: 50%;
             transform: translate(-50%, -50%);
-            height: 350px;
-            width: 350px;
-            .image {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                width: 430px;
-                transform: translate(-50%, -50%);
-            }
         }
         .image-1 {
             left: 20%;
             z-index: 500;
             transition: left 0.5s;
-            .image {
+            .crop {
+                width: 275px;
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                width: 275px;
                 transform: translate(-50%, -50%);
             }
         }
@@ -165,11 +160,11 @@ ul {
             left: 50%;
             z-index: 999;
             transition: left 0.5s;
-            .image {
+            .crop {
+                width: 385px;
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                width: 385px;
                 transform: translate(-50%, -50%);
             }
         }
@@ -177,11 +172,11 @@ ul {
             left: 80%;
             z-index: 500;
             transition: left 1s;
-            .image {
+            .crop {
+                width: 275px;
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                width: 275px;
                 transform: translate(-50%, -50%);
             }
         }
@@ -204,4 +199,11 @@ ul {
             }
         }
     }
+}
+
+.about {
+    height: 800px;
+    background-color: lightseagreen;
+    max-width: 1300px;
+    margin: auto;
 }
