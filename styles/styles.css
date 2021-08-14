@@ -175,20 +175,33 @@ body ul {
           transform: translate(-50%, -50%);
 }
 
-.hero .bottom-section .image-1 {
-  left: 20%;
-  z-index: 500;
-  -webkit-transition: left 0.5s;
-  transition: left 0.5s;
-}
-
-.hero .bottom-section .image-1 .crop {
+.hero .bottom-section .side-crop {
   width: 275px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.hero .bottom-section .center-crop {
+  width: 385px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero .bottom-section .image-1 {
+  left: 20%;
+  z-index: 500;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
 }
 
 .hero .bottom-section .image-2 {
@@ -198,29 +211,11 @@ body ul {
   transition: left 0.5s;
 }
 
-.hero .bottom-section .image-2 .crop {
-  width: 385px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .hero .bottom-section .image-3 {
   left: 80%;
   z-index: 500;
   -webkit-transition: left 1s;
   transition: left 1s;
-}
-
-.hero .bottom-section .image-3 .crop {
-  width: 275px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 400px) {

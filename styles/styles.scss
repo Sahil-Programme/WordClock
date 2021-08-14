@@ -142,41 +142,36 @@ body {
             top: 50%;
             transform: translate(-50%, -50%);
         }
+        .side-crop {
+            width: 275px;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .center-crop {
+            width: 385px;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
         .image-1 {
             left: 20%;
             z-index: 500;
             transition: left 0.5s;
-            .crop {
-                width: 275px;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
         }
         .image-2 {
             left: 50%;
             z-index: 999;
             transition: left 0.5s;
-            .crop {
-                width: 385px;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
         }
         .image-3 {
             left: 80%;
             z-index: 500;
             transition: left 1s;
-            .crop {
-                width: 275px;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
         }
         @media only screen and (max-width: 400px) {
             margin: -2em 0em;
