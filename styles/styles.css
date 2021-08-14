@@ -151,7 +151,7 @@ ul {
   color: white;
 }
 
-.hero .right-section .carousel-container {
+.hero .right-section #carousel-container {
   position: absolute;
   top: 50%;
   left: 50%;
