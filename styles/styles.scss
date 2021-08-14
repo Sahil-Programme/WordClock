@@ -103,22 +103,22 @@ ul {
         height: 600px;
         align-content: center;
         position: relative;
-        margin: 3em 0em;
+        margin: 2em 0em;
         .background-text {
             position: absolute;
             top: 50%;
-            left: 0;
-            transform: translate(0, -50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
             h1 {
-                filter: blur(3px);
-                background-color: #252550aa;
+                filter: blur(4px);
+                background-color: rgba(150, 150, 255, 0.10);
                 letter-spacing: 1px;
                 line-height: 61px;
-                color: #252550;
+                color: #007af350;
                 font-size: 60px;
                 font-family: "Source Code Pro", monospace;
                 span {
-                    color: #9090f0;
+                    color: white;
                 }
             }
         }
@@ -131,17 +131,14 @@ ul {
             max-width: 1300px;
             overflow: hidden;
             position: relative;
-            //background-color: rgb(105, 130, 243);
         }
         .image-container {
+            //display: none;
             position: absolute;
-            //left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            //background-color: rgb(105, 130, 243);
             height: 350px;
             width: 350px;
-            //overflow: hidden;
             .image {
                 //background-color: darkorchid;
                 position: absolute;
