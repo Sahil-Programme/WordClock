@@ -133,14 +133,12 @@ ul {
             position: relative;
         }
         .image-container {
-            //display: none;
             position: absolute;
             top: 50%;
             transform: translate(-50%, -50%);
             height: 350px;
             width: 350px;
             .image {
-                //background-color: darkorchid;
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -148,10 +146,10 @@ ul {
                 transform: translate(-50%, -50%);
             }
         }
-        .left-image {
+        .image-1 {
             left: 20%;
+            transition: left 0.5s;
             .image {
-                //background-color: darkorchid;
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -159,11 +157,11 @@ ul {
                 transform: translate(-50%, -50%);
             }
         }
-        .center-image {
+        .image-2 {
             left: 50%;
             z-index: 1;
+            transition: left 0.5s;
             .image {
-                //background-color: darkorchid;
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -171,10 +169,10 @@ ul {
                 transform: translate(-50%, -50%);
             }
         }
-        .right-image {
+        .image-3 {
             left: 80%;
+            transition: left 1s;
             .image {
-                //background-color: darkorchid;
                 position: absolute;
                 left: 50%;
                 top: 50%;

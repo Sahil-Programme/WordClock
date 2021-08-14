@@ -179,11 +179,13 @@ ul {
           transform: translate(-50%, -50%);
 }
 
-.hero .right-section .left-image {
+.hero .right-section .image-1 {
   left: 20%;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
 }
 
-.hero .right-section .left-image .image {
+.hero .right-section .image-1 .image {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -192,12 +194,14 @@ ul {
           transform: translate(-50%, -50%);
 }
 
-.hero .right-section .center-image {
+.hero .right-section .image-2 {
   left: 50%;
   z-index: 1;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
 }
 
-.hero .right-section .center-image .image {
+.hero .right-section .image-2 .image {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -206,11 +210,13 @@ ul {
           transform: translate(-50%, -50%);
 }
 
-.hero .right-section .right-image {
+.hero .right-section .image-3 {
   left: 80%;
+  -webkit-transition: left 1s;
+  transition: left 1s;
 }
 
-.hero .right-section .right-image .image {
+.hero .right-section .image-3 .image {
   position: absolute;
   left: 50%;
   top: 50%;
