@@ -3,11 +3,20 @@
 }
 
 body {
-  background: #121512;
+  background: #000;
   margin: 0;
   scroll-behavior: smooth;
   font-family: sans-serif;
   color: white;
+}
+
+.main-container {
+  margin: auto;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background: #121512;
+  max-width: 1300px;
 }
 
 .navbar {
@@ -120,13 +129,24 @@ ul {
 .hero .right-section .background-text {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .hero .right-section .background-text h1 {
-  font-family: 'Source Code Pro' 'monospace';
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  background-color: #252550aa;
+  letter-spacing: 1px;
+  line-height: 61px;
+  color: #252550;
+  font-size: 60px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.hero .right-section .background-text h1 span {
+  color: #9090f0;
 }
 
 .hero .right-section .carousel-container {
