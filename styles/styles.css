@@ -128,33 +128,6 @@ body ul {
       align-content: center;
   position: relative;
   margin: 2em 0em;
-  /*
-        .center {
-            width: 385px;
-        }
-        .img-1 {
-            left: 20%;
-        }
-        .img-2 {
-            left: 50%;
-        }
-        .img-3 {
-            left: 80%;
-        }
-        .img-4 {
-            left: 140%;
-        }
-        .img-5 {
-            left: 140%;
-        }
-        /*.center-crop {
-            width: 385px;
-            transition: all 0.5s ease-in-out;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }*/
 }
 
 .hero .bottom-section .background-text {
@@ -216,8 +189,8 @@ body ul {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: width 0.5s ease-out, left 0.5s ease-out;
-  transition: width 0.5s ease-out, left 0.5s ease-out;
+  -webkit-transition: width 0.8s ease-out, left 0.8s ease-out;
+  transition: width 0.8s ease-out, left 0.8s ease-out;
 }
 
 @media only screen and (max-width: 400px) {
