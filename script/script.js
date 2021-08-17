@@ -5,7 +5,7 @@ let img = [
     document.getElementById("img2"),
     document.getElementById("img3"),
     document.getElementById("img4"),
-    document.getElementById("img5")
+    document.getElementById("img5"),
 ];
 
 //let img1 = document.getElementById("img1");
@@ -20,32 +20,8 @@ init_carousel();
 
 function init_carousel() {
 
-    for (var x = 0; x < 5; x++) {
-
-        img[x].style.width = x == 4 ? '375px' : '275px';
-        img[x].style.zIndex =
-            x == 4 ?
-            '100' : x < 4 ?
-            '50' : '75';
-
-        img[x].style.opacity = '100%';
-    }
-
-    img[4].style.left = '50%';
-    img[0].style.left = '80%';
-    img[1].style.left = '120%';
-    img[2].style.left = '-120%';
-    img[3].style.left = '20%';
-
-    img[1].style.opacity = '0';
-    img[2].style.opacity = '0';
-}
-
-function update() {
-
-    if (currentIndex == 5) {
-        currentIndex = 0;
-    }
+    let opacityIndex = currentIndex + 2;
+    if (opacityIndex > 4) opacityIndex = opacityIndex - 5;
 
     for (var x = 0; x < 5; x++) {
 
@@ -56,10 +32,62 @@ function update() {
             '50' : '75';
 
         img[x].style.opacity = '100%';
+
+        if (x == opacityIndex) {
+            img[opacityIndex].style.opacity = '0';
+        } else
+            img[x].style.opacity = '100%';
+
+
+        img[(currentIndex + 0) < 5 ? currentIndex + 0 : (currentIndex + 0) - 5].style.left = '50%';
+        img[(currentIndex + 1) < 5 ? currentIndex + 1 : (currentIndex + 1) - 5].style.left = '80%';
+        img[(currentIndex + 2) < 5 ? currentIndex + 2 : (currentIndex + 2) - 5].style.left = '120%';
+        img[(currentIndex + 3) < 5 ? currentIndex + 3 : (currentIndex + 3) - 5].style.left = '-120%';
+        img[(currentIndex + 4) < 5 ? currentIndex + 4 : (currentIndex + 4) - 5].style.left = '20%';
+    }
+    currentIndex++;
+}
+
+function update() {
+
+    if (currentIndex == 5) {
+        currentIndex = 0;
+    }
+    let opacityIndex = currentIndex + 2;
+    if (opacityIndex >= 5) opacityIndex = opacityIndex - 5;
+
+    for (var x = 0; x < 5; x++) {
+
+        img[x].style.width = x == currentIndex ? '375px' : '275px';
+        img[x].style.zIndex =
+            x == currentIndex ?
+            '100' : x < currentIndex ?
+            '75' : '50';
+
+        img[x].style.opacity = '100%';
+
+        if (x == opacityIndex) {
+            img[opacityIndex].style.opacity = '0';
+        } else
+            img[x].style.opacity = '100%';
+
+        //img[currentIndex].style.left = '50%';
+        /*
+        img[1].style.left = '50%';
+        img[2].style.left = '80%';
+        img[3].style.left = '120%';
+        img[4].style.left = '-120%';
+        img[0].style.left = '20%';
+        */
+        img[(currentIndex + 0) < 5 ? currentIndex + 0 : (currentIndex + 0) - 5].style.left = '50%';
+        img[(currentIndex + 1) < 5 ? currentIndex + 1 : (currentIndex + 1) - 5].style.left = '80%';
+        img[(currentIndex + 2) < 5 ? currentIndex + 2 : (currentIndex + 2) - 5].style.left = '120%';
+        img[(currentIndex + 3) < 5 ? currentIndex + 3 : (currentIndex + 3) - 5].style.left = '-120%';
+        img[(currentIndex + 4) < 5 ? currentIndex + 4 : (currentIndex + 4) - 5].style.left = '20%';
     }
 
-    console.log('index = ' + currentIndex);
-    if (currentIndex == 0) {
+    console.log('index: ' + currentIndex);
+    /*if (currentIndex == 0) {
 
         img[0].style.left = '50%';
         img[1].style.left = '80%';
@@ -67,7 +95,6 @@ function update() {
         img[3].style.left = '-120%';
         img[4].style.left = '20%';
 
-        img[2].style.opacity = '0';
     } else if (currentIndex == 1) {
         img[1].style.left = '50%';
         img[2].style.left = '80%';
@@ -75,7 +102,6 @@ function update() {
         img[4].style.left = '-120%';
         img[0].style.left = '20%';
 
-        img[3].style.opacity = '0';
     } else if (currentIndex == 2) {
         img[2].style.left = '50%';
         img[3].style.left = '80%';
@@ -83,7 +109,6 @@ function update() {
         img[0].style.left = '-120%';
         img[1].style.left = '20%';
 
-        img[4].style.opacity = '0';
     } else if (currentIndex == 3) {
         img[3].style.left = '50%';
         img[4].style.left = '80%';
@@ -91,7 +116,6 @@ function update() {
         img[1].style.left = '-120%';
         img[2].style.left = '20%';
 
-        img[0].style.opacity = '0';
     } else {
         img[4].style.left = '50%';
         img[0].style.left = '80%';
@@ -99,7 +123,6 @@ function update() {
         img[2].style.left = '-120%';
         img[3].style.left = '20%';
 
-        img[1].style.opacity = '0';
-    }
+    }*/
     currentIndex++;
 }
