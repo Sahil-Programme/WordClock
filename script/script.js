@@ -29,7 +29,7 @@ function init_carousel() {
 
     for (var x = 0; x < maxImages; x++) {
 
-        img[x].style.width = x == currentIndex ? '375px' : '275px';
+        img[x].style.maxWidth = x == currentIndex ? '375px' : '275px';
         img[x].style.zIndex =
             x == currentIndex ?
             '100' : x < currentIndex ?
@@ -64,7 +64,7 @@ function update() {
 
     for (var x = 0; x < maxImages; x++) {
 
-        img[x].style.width = x == currentIndex ? '375px' : '275px';
+        img[x].style.maxWidth = x == currentIndex ? '375px' : '275px';
         img[x].style.zIndex =
             x == currentIndex ?
             '100' : x < currentIndex ?
@@ -77,14 +77,6 @@ function update() {
         } else
             img[x].style.opacity = '100%';
 
-        //img[currentIndex].style.left = '50%';
-        /*
-        img[1].style.left = '50%';
-        img[2].style.left = '80%';
-        img[3].style.left = '120%';
-        img[4].style.left = '-120%';
-        img[0].style.left = '20%';
-        */
         img[(currentIndex + 0) < maxImages ? currentIndex + 0 : (currentIndex + 0) - maxImages].style.left = '50%';
         img[(currentIndex + 1) < maxImages ? currentIndex + 1 : (currentIndex + 1) - maxImages].style.left = '80%';
         img[(currentIndex + 2) < maxImages ? currentIndex + 2 : (currentIndex + 2) - maxImages].style.left = '150%';
@@ -94,43 +86,5 @@ function update() {
         img[(currentIndex + 6) < maxImages ? currentIndex + 6 : (currentIndex + 6) - maxImages].style.left = '20%';
     }
 
-    //console.log('index: ' + currentIndex);
-    /*if (currentIndex == 0) {
-
-        img[0].style.left = '50%';
-        img[1].style.left = '80%';
-        img[2].style.left = '120%';
-        img[3].style.left = '-120%';
-        img[4].style.left = '20%';
-
-    } else if (currentIndex == 1) {
-        img[1].style.left = '50%';
-        img[2].style.left = '80%';
-        img[3].style.left = '120%';
-        img[4].style.left = '-120%';
-        img[0].style.left = '20%';
-
-    } else if (currentIndex == 2) {
-        img[2].style.left = '50%';
-        img[3].style.left = '80%';
-        img[4].style.left = '120%';
-        img[0].style.left = '-120%';
-        img[1].style.left = '20%';
-
-    } else if (currentIndex == 3) {
-        img[3].style.left = '50%';
-        img[4].style.left = '80%';
-        img[0].style.left = '120%';
-        img[1].style.left = '-120%';
-        img[2].style.left = '20%';
-
-    } else {
-        img[4].style.left = '50%';
-        img[0].style.left = '80%';
-        img[1].style.left = '120%';
-        img[2].style.left = '-120%';
-        img[3].style.left = '20%';
-
-    }*/
     currentIndex++;
 }

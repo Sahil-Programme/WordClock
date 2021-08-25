@@ -31,6 +31,8 @@ body ul {
   height: min-content;
   background: #121512;
   max-width: 1300px;
+  height: 100%;
+  width: 100%;
 }
 
 .navbar {
@@ -75,53 +77,31 @@ body ul {
   cursor: pointer;
 }
 
-.hero {
+#home {
   text-align: center;
   max-width: 1300px;
-  place-content: space-between;
   margin: auto;
 }
 
-.hero .top-section .hero__container {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 1300px;
-  margin: 0 auto;
-  height: 90%;
-  text-align: center;
-  padding: 2em;
+#home .heading {
+  margin-right: auto;
 }
 
-.hero .top-section .hero__heading {
-  font-size: 5em;
-  color: #fff;
+#home .heading .heading-text {
+  font-size: 7rem;
 }
 
-.hero .top-section .hero__heading span {
+#home .heading .heading-text span {
   color: var(--primary-color);
 }
 
-.hero .top-section .hero__description {
-  font-size: 60px;
-}
-
-@media only screen and (max-width: 500px) {
-  .hero .top-section .hero__heading {
-    font-size: 3em;
+@media screen and (max-width: 600px) {
+  #home .heading .heading-text {
+    font-size: 3rem;
   }
 }
 
-@media only screen and (max-width: 300px) {
-  .hero .top-section .hero__heading {
-    font-size: 2em;
-  }
-}
-
-.hero .bottom-section {
+#home .bottom-section {
   max-width: 1300px;
   height: 600px;
   -ms-flex-line-pack: center;
@@ -130,7 +110,7 @@ body ul {
   margin: 2em 0em;
 }
 
-.hero .bottom-section .background-text {
+#home .bottom-section .background-text {
   z-index: 2;
   margin: auto;
   position: absolute;
@@ -140,7 +120,7 @@ body ul {
           transform: translate(-50%, -50%);
 }
 
-.hero .bottom-section .background-text h1 {
+#home .bottom-section .background-text h1 {
   -webkit-filter: blur(5px);
           filter: blur(5px);
   background-color: rgba(150, 150, 255, 0.1);
@@ -151,11 +131,11 @@ body ul {
   font-family: "Source Code Pro", monospace;
 }
 
-.hero .bottom-section .background-text h1 span {
+#home .bottom-section .background-text h1 span {
   color: white;
 }
 
-.hero .bottom-section #carousel-container {
+#home .bottom-section #carousel-container {
   z-index: 999;
   position: absolute;
   top: 50%;
@@ -168,49 +148,57 @@ body ul {
   position: relative;
 }
 
-.hero .bottom-section .slider-container {
+#home .bottom-section .slider-container {
   height: 100%;
   position: relative;
   left: 0;
 }
 
-.hero .bottom-section .image-container {
+#home .bottom-section .image-container {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.hero .bottom-section .crop {
+#home .bottom-section .crop {
   z-index: 999;
-  width: 275px;
+  max-width: 275px;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: width 1s ease-out, left 1s ease-out;
-  transition: width 1s ease-out, left 1s ease-out;
+  -webkit-transition: max-width 1s ease-in-out, left 1s ease-in-out;
+  transition: max-width 1s ease-in-out, left 1s ease-in-out;
 }
 
-@media only screen and (max-width: 400px) {
-  .hero .bottom-section {
-    margin: -2em 0em;
-  }
-  .hero .bottom-section .left-image .image {
-    width: 225px;
-  }
-  .hero .bottom-section .center-image .image {
-    width: 300px;
-  }
-  .hero .bottom-section .right-image .image {
-    width: 225px;
-  }
+#about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1300px;
 }
 
-.about {
-  height: 800px;
-  background-color: lightseagreen;
+#about > * {
+  background-color: blue;
+  padding: 10px;
+  margin: 20px;
+}
+
+#about .heading-container {
+  height: auto;
+}
+
+#about .feature-container {
+  height: auto;
+}
+
+#contact {
+  height: 100px;
+  background-color: teal;
   max-width: 1300px;
   margin: auto;
 }
