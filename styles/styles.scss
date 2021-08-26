@@ -61,75 +61,131 @@ body {
     }
 }
 
+.grid {
+    //background-color: green;
+    margin: auto;
+    display: grid;
+    overflow: hidden;
+    max-width: 1500px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas: "title title""carousel carousel""about-heading about-content""contact-heading contact-content""footer footer";
+    .title-heading {
+        grid-area: title;
+    }
+    .carousel-container {
+        grid-area: carousel;
+    }
+    .about-heading {
+        grid-area: about-heading;
+    }
+    .about-content {
+        grid-area: about-content;
+    }
+    .contact-heading {
+        grid-area: contact-heading;
+    }
+    .contact-content {
+        grid-area: contact-content;
+    }
+    .footer {
+        grid-area: footer;
+    }
+}
+
 .container-div {
+    margin: auto;
     position: relative;
 }
 
 .slider-container {
-    position: absolute;
+    max-width: 1500px;
+    height: 650px;
+    .crop {
+        position: absolute;
+        max-width: 275px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: max-width 1s ease-in-out, left 1s ease-in-out; //, z-index 0.25s; //, z-index 0.45s;
+    }
 }
 
 .background-text {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    filter: blur(8px);
+    max-width: 1500px;
+    height: auto;
     position: absolute;
 }
 
-.title-heading {
-    grid-area: title;
-    background: green;
-}
-
-.carousel-container {
-    grid-area: carousel;
-    background: blue;
-}
-
-.about-heading {
-    grid-area: about-heading;
-    background: red;
-}
-
-.about-content {
-    grid-area: about-content;
-    background: pink;
-}
-
-.contact-heading {
-    grid-area: contact-heading;
-    background: grey;
-}
-
-.contact-content {
-    grid-area: contact-content;
-    background: darkgrey;
-}
-
-.footer {
-    grid-area: footer;
-    background: purple;
-}
-
-.crop {
-    width: 200px;
-}
-
-.grid {
-    margin: auto;
+.heading-div {
+    width: 100%;
     max-width: 1500px;
-    display: grid;
-    height: min-content;
-    grid-template-columns: 100%;
-    grid-template-rows: 0.6fr 3fr 1fr 1fr 1fr 1fr 0.5fr;
-    grid-template-areas: "title" "carousel" "about-heading" "about-content" "contact-heading" "contact-content" "footer";
+    overflow: hidden;
+    text-align: center;
+    font-size: 4em;
+    height: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .title-text {
+        z-index: 2;
+        span {
+            color: blue;
+        }
+    }
+    /*.container-div {
+        z-index: 1;
+        color: transparent;
+        position: absolute;
+        transform: translate(-6px, -6px);
+        -webkit-text-stroke: 4px var(--primary-color);
+        -webkit-text-fill-color: transparent;
+    }*/
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 900px) {
+    .heading-div {
+        font-size: 2em;
+        height: 2.25em;
+    }
     .grid {
-        margin: auto;
-        max-width: 1500px;
-        display: grid;
-        height: min-content;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.6fr 3fr 1fr 1fr 0.5fr;
-        grid-template-areas: "title title" "carousel carousel" "about-heading about-content" "contact-heading contact-content" "footer";
+        background-color: coral;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+        grid-template-areas: "title""carousel""about-heading""about-content""contact-heading""contact-content""footer";
+        .title-heading {
+            grid-area: title;
+        }
+        .carousel-container {
+            grid-area: carousel;
+        }
+        .about-heading {
+            grid-area: about-heading;
+        }
+        .about-content {
+            grid-area: about-content;
+        }
+        .contact-heading {
+            grid-area: contact-heading;
+        }
+        .contact-content {
+            grid-area: contact-content;
+        }
+        .footer {
+            grid-area: footer;
+        }
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .heading-div {
+        font-size: 1.5em;
+        height: 4em;
     }
 }
