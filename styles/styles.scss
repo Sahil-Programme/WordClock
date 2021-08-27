@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #007af3;
+    --primary-color: #0000ff;
 }
 
 * {
@@ -8,11 +8,12 @@
 
 html,
 body {
+    font-size: 16px;
     height: 100vh;
 }
 
 body {
-    background: black;
+    background: #181818;
     margin: 0;
     font-family: sans-serif;
     color: white;
@@ -30,13 +31,14 @@ body {
 //navbar
 .navbar {
     top: 0;
-    max-width: 1500px;
     background: #202020;
-    padding: 1em;
+    //padding: 1em;
     margin: auto;
+    max-width: 1500px;
     position: sticky;
     z-index: 2000;
     .logo {
+        margin: 1rem;
         text-decoration: none;
         font-weight: bold;
         color: white;
@@ -51,9 +53,11 @@ body {
     .container {
         display: flex;
         place-content: space-between;
+        align-items: center;
         img {
-            height: 1.2em;
-            width: 1.2em;
+            margin: 1rem;
+            width: 2em;
+            //height: 2em;
         }
     }
     .mobile-menu {
@@ -62,14 +66,16 @@ body {
 }
 
 .grid {
-    //background-color: green;
+    background-color: black;
+    padding: 0;
+    margin: 0;
     margin: auto;
     display: grid;
     overflow: hidden;
     max-width: 1500px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: min-content;
-    grid-template-areas: "title title""carousel carousel""about-heading about-content""contact-heading contact-content""footer footer";
+    grid-template-areas: "title""carousel""about-heading""about-content""contact-heading""contact-content""footer";
     .title-heading {
         grid-area: title;
     }
@@ -98,6 +104,29 @@ body {
     position: relative;
 }
 
+// Title section
+.heading-div {
+    width: 100%;
+    max-width: 1500px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 4em;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .title-text {
+        //text-shadow: 4px 4px var(--primary-color);
+        z-index: 2;
+        span {
+            color: var(--primary-color);
+            //text-shadow: 4px 4px white;
+        }
+    }
+}
+
+// Carousel
 .slider-container {
     max-width: 1500px;
     height: 650px;
@@ -115,77 +144,50 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5em;
-    filter: blur(8px);
+    font-size: 2em;
+    filter: blur(7px);
     max-width: 1500px;
     height: auto;
     position: absolute;
+    line-height: 2em;
+    color: var(--primary-color);
 }
 
-.heading-div {
-    width: 100%;
-    max-width: 1500px;
-    overflow: hidden;
-    text-align: center;
-    font-size: 4em;
-    height: 4.5em;
+// About section
+.about-heading,
+.contact-heading {
+    height: 6rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    .title-text {
-        z-index: 2;
-        span {
-            color: blue;
-        }
-    }
-    /*.container-div {
-        z-index: 1;
-        color: transparent;
-        position: absolute;
-        transform: translate(-6px, -6px);
-        -webkit-text-stroke: 4px var(--primary-color);
-        -webkit-text-fill-color: transparent;
-    }*/
+    margin-top: 5em;
+}
+
+.about-text,
+.contact-text {
+    margin: 1rem;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 3px 3px var(--primary-color);
+}
+
+.about-content,
+.contact-content {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+    margin: 0 1rem 0 1rem;
 }
 
 @media screen and (max-width: 900px) {
     .heading-div {
         font-size: 2em;
-        height: 2.25em;
-    }
-    .grid {
-        background-color: coral;
-        grid-template-columns: 1fr;
-        grid-template-rows: min-content;
-        grid-template-areas: "title""carousel""about-heading""about-content""contact-heading""contact-content""footer";
-        .title-heading {
-            grid-area: title;
-        }
-        .carousel-container {
-            grid-area: carousel;
-        }
-        .about-heading {
-            grid-area: about-heading;
-        }
-        .about-content {
-            grid-area: about-content;
-        }
-        .contact-heading {
-            grid-area: contact-heading;
-        }
-        .contact-content {
-            grid-area: contact-content;
-        }
-        .footer {
-            grid-area: footer;
-        }
+        height: 3em;
     }
 }
 
 @media screen and (max-width: 545px) {
     .heading-div {
         font-size: 1.5em;
-        height: 4em;
+        height: 6em;
     }
 }

@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #007af3;
+  --primary-color: #0000ff;
 }
 
 * {
@@ -8,11 +8,12 @@
 
 html,
 body {
+  font-size: 16px;
   height: 100vh;
 }
 
 body {
-  background: black;
+  background: #181818;
   margin: 0;
   font-family: sans-serif;
   color: white;
@@ -31,16 +32,16 @@ body ul {
 
 .navbar {
   top: 0;
-  max-width: 1500px;
   background: #202020;
-  padding: 1em;
   margin: auto;
+  max-width: 1500px;
   position: -webkit-sticky;
   position: sticky;
   z-index: 2000;
 }
 
 .navbar .logo {
+  margin: 1rem;
   text-decoration: none;
   font-weight: bold;
   color: white;
@@ -60,11 +61,14 @@ body ul {
   display: -ms-flexbox;
   display: flex;
   place-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar .container img {
-  height: 1.2em;
-  width: 1.2em;
+  margin: 1rem;
+  width: 2em;
 }
 
 .navbar .mobile-menu {
@@ -72,30 +76,31 @@ body ul {
 }
 
 .grid {
+  background-color: black;
+  padding: 0;
+  margin: 0;
   margin: auto;
   display: -ms-grid;
   display: grid;
   overflow: hidden;
   max-width: 1500px;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: min-content;
       grid-template-rows: -webkit-min-content;
       grid-template-rows: min-content;
-      grid-template-areas: "title title" "carousel carousel" "about-heading about-content" "contact-heading contact-content" "footer footer";
+      grid-template-areas: "title" "carousel" "about-heading" "about-content" "contact-heading" "contact-content" "footer";
 }
 
 .grid .title-heading {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: title;
 }
 
 .grid .carousel-container {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: carousel;
 }
 
@@ -106,33 +111,59 @@ body ul {
 }
 
 .grid .about-content {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: about-content;
 }
 
 .grid .contact-heading {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: contact-heading;
 }
 
 .grid .contact-content {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
   grid-area: contact-content;
 }
 
 .grid .footer {
-  -ms-grid-row: 5;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: footer;
 }
 
 .container-div {
   margin: auto;
   position: relative;
+}
+
+.heading-div {
+  width: 100%;
+  max-width: 1500px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 4em;
+  height: 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.heading-div .title-text {
+  z-index: 2;
+}
+
+.heading-div .title-text span {
+  color: var(--primary-color);
 }
 
 .slider-container {
@@ -156,104 +187,59 @@ body ul {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 1.5em;
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
+  font-size: 2em;
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
   max-width: 1500px;
   height: auto;
   position: absolute;
+  line-height: 2em;
+  color: var(--primary-color);
 }
 
-.heading-div {
-  width: 100%;
-  max-width: 1500px;
-  overflow: hidden;
-  text-align: center;
-  font-size: 4em;
-  height: 4.5em;
+.about-heading,
+.contact-heading {
+  height: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  /*.container-div {
-        z-index: 1;
-        color: transparent;
-        position: absolute;
-        transform: translate(-6px, -6px);
-        -webkit-text-stroke: 4px var(--primary-color);
-        -webkit-text-fill-color: transparent;
-    }*/
+  margin-top: 5em;
 }
 
-.heading-div .title-text {
-  z-index: 2;
+.about-text,
+.contact-text {
+  margin: 1rem;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 3px 3px var(--primary-color);
 }
 
-.heading-div .title-text span {
-  color: blue;
+.about-content,
+.contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5em;
+  margin: 0 1rem 0 1rem;
 }
 
 @media screen and (max-width: 900px) {
   .heading-div {
     font-size: 2em;
-    height: 2.25em;
-  }
-  .grid {
-    background-color: coral;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: min-content;
-        grid-template-rows: -webkit-min-content;
-        grid-template-rows: min-content;
-        grid-template-areas: "title" "carousel" "about-heading" "about-content" "contact-heading" "contact-content" "footer";
-  }
-  .grid .title-heading {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: title;
-  }
-  .grid .carousel-container {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: carousel;
-  }
-  .grid .about-heading {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: about-heading;
-  }
-  .grid .about-content {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: about-content;
-  }
-  .grid .contact-heading {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-area: contact-heading;
-  }
-  .grid .contact-content {
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    grid-area: contact-content;
-  }
-  .grid .footer {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-    grid-area: footer;
+    height: 3em;
   }
 }
 
 @media screen and (max-width: 545px) {
   .heading-div {
     font-size: 1.5em;
-    height: 4em;
+    height: 6em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
