@@ -32,7 +32,6 @@ body {
 .navbar {
     top: 0;
     background: #202020;
-    //padding: 1em;
     margin: auto;
     max-width: 1500px;
     position: sticky;
@@ -57,7 +56,6 @@ body {
         img {
             margin: 1rem;
             width: 2em;
-            //height: 2em;
         }
     }
     .mobile-menu {
@@ -73,9 +71,9 @@ body {
     display: grid;
     overflow: hidden;
     max-width: 1500px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
-    grid-template-areas: "title""carousel""about-heading""about-content""contact-heading""contact-content""footer";
+    grid-template-areas: "title title""carousel carousel""about-heading about-heading""tag-line about-image""about-list about-image""contact-heading contact-heading""contact-content contact-content""footer footer";
     .title-heading {
         grid-area: title;
     }
@@ -85,8 +83,14 @@ body {
     .about-heading {
         grid-area: about-heading;
     }
-    .about-content {
-        grid-area: about-content;
+    .about-tag-line {
+        grid-area: tag-line;
+    }
+    .list {
+        grid-area: about-list;
+    }
+    .animated-image-about {
+        grid-area: about-image;
     }
     .contact-heading {
         grid-area: contact-heading;
@@ -156,21 +160,76 @@ body {
 // About section
 .about-heading,
 .contact-heading {
-    height: 6rem;
+    height: auto;
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-top: 8rem;
+    align-items: center;
+    .about-text,
+    .contact-text {
+        font-size: 5rem;
+        color: white;
+        text-shadow: 3px 3px var(--primary-color);
+    }
+}
+
+.about-tag-line {
+    //background-color: limegreen;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    font-size: 2.5em;
+    color: lightslategrey;
+    span {
+        color: yellow;
+         :hover {
+            color: white;
+        }
+    }
+}
+
+.about-tag-line {
+    span:hover {
+        color: white;
+    }
+}
+
+.list {
+    margin-left: 2rem;
+    margin-right: 1rem;
+    font-size: 2.5em; // 1rem;
+    color: lightslategrey;
+    li {
+        padding: 0.5em;
+        border-radius: 10px;
+    }
+    li:hover {
+        cursor: pointer;
+        color: black;
+        background-color: yellow;
+    }
+    li:active {
+        cursor: pointer;
+        color: black;
+        background-color: yellow;
+    }
+}
+
+.animated-image-about {
+    margin: 0 1em 1em 1em;
+    padding: 0.5em;
+    border-color: blueviolet;
+    border-style: solid;
+    border-width: 6px;
+    border-radius: 25px;
+    height: 100%;
+    max-width: 500px;
     display: flex;
     align-items: center;
-    margin-top: 5em;
+    justify-content: center;
 }
 
-.about-text,
-.contact-text {
-    margin: 1rem;
-    font-size: 4rem;
-    color: white;
-    text-shadow: 3px 3px var(--primary-color);
-}
-
-.about-content,
 .contact-content {
     display: flex;
     align-items: center;
@@ -183,11 +242,87 @@ body {
         font-size: 2em;
         height: 3em;
     }
+    .about-heading,
+    .contact-heading {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 4rem;
+        .about-text,
+        .contact-text {
+            font-size: 3.5rem;
+        }
+    }
+    .about-tag-line {
+        //background-color: limegreen;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0;
+        font-size: 2em;
+    }
+    .list {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 2em;
+    }
 }
 
 @media screen and (max-width: 545px) {
     .heading-div {
         font-size: 1.5em;
         height: 6em;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+        grid-template-areas: "title""carousel""about-heading""tag-line""about-list""about-image""contact-heading""contact-content""footer";
+        .title-heading {
+            grid-area: title;
+        }
+        .carousel-container {
+            grid-area: carousel;
+        }
+        .about-heading {
+            grid-area: about-heading;
+        }
+        .about-tag-line {
+            grid-area: tag-line;
+        }
+        .list {
+            grid-area: about-list;
+        }
+        .animated-image-about {
+            grid-area: about-image;
+        }
+        .contact-heading {
+            grid-area: contact-heading;
+        }
+        .contact-content {
+            grid-area: contact-content;
+        }
+        .footer {
+            grid-area: footer;
+        }
+    }
+    .about-heading,
+    .contact-heading {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-top: 3rem;
+        .about-text,
+        .contact-text {
+            font-size: 3rem;
+        }
+    }
+    .about-tag-line {
+        //background-color: limegreen;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-top: 0;
+        font-size: 1.5em;
+    }
+    .list {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 1.5em;
     }
 }

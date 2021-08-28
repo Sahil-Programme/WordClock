@@ -84,53 +84,72 @@ body ul {
   display: grid;
   overflow: hidden;
   max-width: 1500px;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -ms-grid-rows: min-content;
       grid-template-rows: -webkit-min-content;
       grid-template-rows: min-content;
-      grid-template-areas: "title" "carousel" "about-heading" "about-content" "contact-heading" "contact-content" "footer";
+      grid-template-areas: "title title" "carousel carousel" "about-heading about-heading" "tag-line about-image" "about-list about-image" "contact-heading contact-heading" "contact-content contact-content" "footer footer";
 }
 
 .grid .title-heading {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: title;
 }
 
 .grid .carousel-container {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: carousel;
 }
 
 .grid .about-heading {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: about-heading;
 }
 
-.grid .about-content {
+.grid .about-tag-line {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: about-content;
+  grid-area: tag-line;
+}
+
+.grid .list {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: about-list;
+}
+
+.grid .animated-image-about {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: about-image;
 }
 
 .grid .contact-heading {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: contact-heading;
 }
 
 .grid .contact-content {
-  -ms-grid-row: 6;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: contact-content;
 }
 
 .grid .footer {
-  -ms-grid-row: 7;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: footer;
 }
 
@@ -199,25 +218,91 @@ body ul {
 
 .about-heading,
 .contact-heading {
-  height: 6rem;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-top: 8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-heading .about-text,
+.about-heading .contact-text,
+.contact-heading .about-text,
+.contact-heading .contact-text {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 3px 3px var(--primary-color);
+}
+
+.about-tag-line {
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-top: 0;
+  font-size: 2.5em;
+  color: lightslategrey;
+}
+
+.about-tag-line span {
+  color: yellow;
+}
+
+.about-tag-line span :hover {
+  color: white;
+}
+
+.about-tag-line span:hover {
+  color: white;
+}
+
+.list {
+  margin-left: 2rem;
+  margin-right: 1rem;
+  font-size: 2.5em;
+  color: lightslategrey;
+}
+
+.list li {
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+.list li:hover {
+  cursor: pointer;
+  color: black;
+  background-color: yellow;
+}
+
+.list li:active {
+  cursor: pointer;
+  color: black;
+  background-color: yellow;
+}
+
+.animated-image-about {
+  margin: 0 1em 1em 1em;
+  padding: 0.5em;
+  border-color: blueviolet;
+  border-style: solid;
+  border-width: 6px;
+  border-radius: 25px;
+  height: 100%;
+  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.about-text,
-.contact-text {
-  margin: 1rem;
-  font-size: 4rem;
-  color: white;
-  text-shadow: 3px 3px var(--primary-color);
-}
-
-.about-content,
 .contact-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,12 +319,111 @@ body ul {
     font-size: 2em;
     height: 3em;
   }
+  .about-heading,
+  .contact-heading {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 4rem;
+  }
+  .about-heading .about-text,
+  .about-heading .contact-text,
+  .contact-heading .about-text,
+  .contact-heading .contact-text {
+    font-size: 3.5rem;
+  }
+  .about-tag-line {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    font-size: 2em;
+  }
+  .list {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2em;
+  }
 }
 
 @media screen and (max-width: 545px) {
   .heading-div {
     font-size: 1.5em;
     height: 6em;
+  }
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: min-content;
+        grid-template-rows: -webkit-min-content;
+        grid-template-rows: min-content;
+        grid-template-areas: "title" "carousel" "about-heading" "tag-line" "about-list" "about-image" "contact-heading" "contact-content" "footer";
+  }
+  .grid .title-heading {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: title;
+  }
+  .grid .carousel-container {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: carousel;
+  }
+  .grid .about-heading {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: about-heading;
+  }
+  .grid .about-tag-line {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: tag-line;
+  }
+  .grid .list {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: about-list;
+  }
+  .grid .animated-image-about {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: about-image;
+  }
+  .grid .contact-heading {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: contact-heading;
+  }
+  .grid .contact-content {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    grid-area: contact-content;
+  }
+  .grid .footer {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+  .about-heading,
+  .contact-heading {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 3rem;
+  }
+  .about-heading .about-text,
+  .about-heading .contact-text,
+  .contact-heading .about-text,
+  .contact-heading .contact-text {
+    font-size: 3rem;
+  }
+  .about-tag-line {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+  .list {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.5em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
