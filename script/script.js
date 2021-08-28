@@ -1,4 +1,16 @@
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarlinks = document.getElementsByClassName('navbar-links')[0];
+const ul = document.getElementById('u-list');
+
+toggleButton.addEventListener('click', () => {
+    navbarlinks.classList.toggle('active')
+})
+ul.addEventListener('click', () => {
+    navbarlinks.classList.toggle('active')
+})
+
 let currentIndex = 0;
+
 
 let img = [
     document.getElementById("img1"),
