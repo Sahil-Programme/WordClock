@@ -10,7 +10,6 @@
 html,
 body {
     font-size: 16px;
-    height: 100vh;
 }
 
 body {
@@ -264,13 +263,11 @@ body {
     color: lightslategrey;
     span {
         color: yellow;
-         :hover {
-            color: white;
-        }
     }
 }
 
 .about-tag-line {
+    word-break: break-all;
     span:hover {
         color: white;
     }
@@ -282,6 +279,7 @@ body {
     font-size: 2.5em; // 1rem;
     color: lightslategrey;
     li {
+        word-break: break-all;
         padding: 0.5em;
         border-radius: 10px;
     }
@@ -312,10 +310,17 @@ body {
 }
 
 .contact-content {
-    display: flex;
-    align-items: center;
+    color: lightslategrey;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-top: 0;
     font-size: 2.5em;
-    margin: 0 1rem 0 1rem;
+}
+
+.footer {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 2em;
 }
 
 @media screen and (max-width: 900px) {
@@ -335,6 +340,12 @@ body {
     }
     .about-tag-line {
         //background-color: limegreen;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0;
+        font-size: 2em;
+    }
+    .contact-content {
         margin-left: 1rem;
         margin-right: 1rem;
         margin-top: 0;
@@ -426,6 +437,12 @@ body {
         margin-right: 0.5rem;
         margin-top: 0;
         font-size: 1.5em;
+    }
+    .contact-content {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-top: 0;
+        font-size: 2em;
     }
     .list {
         margin-left: 0.5rem;

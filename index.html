@@ -87,13 +87,28 @@
                 <h1 class="contact-text">Contact</h1>
             </div>
             <div class="contact-content">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum soluta repellendus iusto amet ipsam quod dolores unde eos, voluptatibus quisquam cum recusandae. Unde iusto molestias blanditiis, ducimus voluptatum cupiditate repellat accusantium eos quo
-                    suscipit labore commodi, quod natus distinctio veritatis voluptates repellendus facere porro saepe libero itaque dignissimos dolores. Expedita, assumenda vitae dolorum enim iure error minima harum dolor optio dolorem dicta officia
-                    voluptate et doloribus quaerat? Maxime voluptatum sapiente amet impedit voluptatem alias, dolorem ea tempore error veritatis quos hic blanditiis consectetur molestias itaque ad, tempora dolor. Culpa, quas!
-                </p>
+                <p id="ID">
+                    sahilyadav127@gmail.com
+
+                </p><button onclick="myFunction()">Copy text</button>
+                <script>
+                    function myFunction() {
+                        /* Get the text field */
+                        var copyText = document.getElementById("ID").innerText;
+
+                        /* Select the text field */
+                        copyText.select();
+                        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                        /* Copy the text inside the text field */
+                        navigator.clipboard.writeText(copyText.value);
+
+                        /* Alert the copied text */
+                        alert("Copied the text: " + copyText.value);
+                    }
+                </script>
             </div>
-            <div class="footer">Footer</div>
+            <div class="footer">&#169 2021 Sahil Yadav</div>
         </div>
     </div>
     <script src="script/script.js"></script>

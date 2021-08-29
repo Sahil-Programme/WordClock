@@ -11,7 +11,6 @@
 html,
 body {
   font-size: 16px;
-  height: 100vh;
 }
 
 body {
@@ -342,8 +341,8 @@ body ul {
   color: yellow;
 }
 
-.about-tag-line span :hover {
-  color: white;
+.about-tag-line {
+  word-break: break-all;
 }
 
 .about-tag-line span:hover {
@@ -358,6 +357,7 @@ body ul {
 }
 
 .list li {
+  word-break: break-all;
   padding: 0.5em;
   border-radius: 10px;
 }
@@ -395,14 +395,17 @@ body ul {
 }
 
 .contact-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  color: lightslategrey;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-top: 0;
   font-size: 2.5em;
-  margin: 0 1rem 0 1rem;
+}
+
+.footer {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 2em;
 }
 
 @media screen and (max-width: 900px) {
@@ -423,6 +426,12 @@ body ul {
     font-size: 3.5rem;
   }
   .about-tag-line {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    font-size: 2em;
+  }
+  .contact-content {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 0;
@@ -548,6 +557,12 @@ body ul {
     margin-right: 0.5rem;
     margin-top: 0;
     font-size: 1.5em;
+  }
+  .contact-content {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    font-size: 2em;
   }
   .list {
     margin-left: 0.5rem;
