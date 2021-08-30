@@ -1,0 +1,38 @@
+.matrix {
+  margin: auto;
+  height: auto;
+  width: auto;
+}
+
+.block {
+  font-family: "Source Code Pro";
+  font-size: 1.6em;
+  -o-object-fit: inherit;
+     object-fit: inherit;
+  padding: 0;
+  border-width: 0;
+  display: inline-block;
+  line-height: 25px;
+  word-spacing: 10px;
+  letter-spacing: 0.2em;
+  color: #282828;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+}
+
+.frame {
+  margin-right: 2em;
+  margin-left: 2em;
+  border-style: solid;
+  border-color: #5050ff;
+  border-width: 3;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+
+.center {
+  margin: auto;
+}
+/*# sourceMappingURL=matrix.css.map */
