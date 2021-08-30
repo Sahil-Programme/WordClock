@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap");
 :root {
   --primary-color: #0000ff;
 }
@@ -297,13 +298,15 @@ body ul {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 2em;
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
   max-width: 1500px;
   height: auto;
   position: absolute;
-  line-height: 2em;
+  line-height: 1.7em;
   color: var(--primary-color);
+  font-family: 'Source Code Pro';
+  font-style: normal;
 }
 
 .about-heading,
@@ -341,10 +344,6 @@ body ul {
   color: yellow;
 }
 
-.about-tag-line {
-  word-break: break-all;
-}
-
 .about-tag-line span:hover {
   color: white;
 }
@@ -357,7 +356,6 @@ body ul {
 }
 
 .list li {
-  word-break: break-all;
   padding: 0.5em;
   border-radius: 10px;
 }
@@ -375,14 +373,12 @@ body ul {
 }
 
 .animated-image-about {
-  margin: 0 1em 1em 1em;
-  padding: 0.5em;
   border-color: blueviolet;
   border-style: solid;
   border-width: 6px;
   border-radius: 25px;
-  height: 100%;
-  max-width: 500px;
+  margin: 1em 1em 1em 1em;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,11 +390,37 @@ body ul {
           justify-content: center;
 }
 
+.animated-image-about p {
+  font-size: 4em;
+  line-height: 0.7em;
+  margin: 0;
+  background-color: teal;
+  font-family: 'Source Code Pro';
+  overflow: hidden;
+}
+
 .contact-content {
   color: lightslategrey;
   margin-left: 2rem;
   margin-right: 1rem;
   margin-top: 0;
+  font-size: 2.5em;
+}
+
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#ID {
+  color: lightslategrey;
+  cursor: pointer;
+  background-color: transparent;
+  border-style: none;
+  text-decoration: none;
   font-size: 2.5em;
 }
 
@@ -562,11 +584,19 @@ body ul {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-top: 0;
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .list {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    font-size: 1.5em;
+  }
+  #ID {
+    color: lightslategrey;
+    cursor: pointer;
+    background-color: transparent;
+    border-style: none;
+    text-decoration: none;
     font-size: 1.5em;
   }
 }
