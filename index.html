@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WordClock support page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet" />
+    <!--link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet" /-->
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/matrix.css" />
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <div class="nav-container">
             <nav class="navbar">
                 <a class="logo" href="#home"><span>Word</span>Clock</a>
-                <a href="#" class="toggle-button">
+                <a class="toggle-button">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -81,30 +82,51 @@
                 <li>Change colors as per your preferences</li>
                 <li>React to the sound around you</li>
             </ul>
+<<<<<<< HEAD
             <div class="animated-image-about">ADDING STUFF HERE</div>
+=======
+            <div class="animated-image-about">
+                <div class="center">
+                    <div class="frame">
+                        <div id="matrix"></div>
+                    </div>
+                </div>
+            </div>
+            <!--div id="matrix" class="animated-image-about"></div-->
+            <!--div id="matrix" class="animated-image-about">
+                <p>HHAPPYLBIRTHDAYT
+                    <br>CFJKXCHARLYUIWZT
+                    <br>ITVISYTWENTYHALF
+                    <br>ONELEVENINETEENC
+                    <br>TWELVESIXTEENTEN
+                    <br>THIRTEENEIGHTEEN
+                    <br>FOURTEENTWOVFIVE
+                    <br>QUARTERSEVENTEEN
+                    <br>THREEHPASTOUFIVE
+                    <br>FOURTWELVEIGHTEN
+                    <br>NINEFIVESIXTHREE
+                    <br>TWONELEVENSEVENT
+                    <br>OCLOCKFINATHESTX
+                    <br>EVENINGAFTERNOON
+                    <br>MORNINGNIGHTIAND
+                    <br>COOLCOLDWARMHOTV
+                    <br>
+                </p>
+            </div-->
+>>>>>>> grid
             <!--Contact section-->
             <div id="contact" class="contact-heading">
                 <h1 class="contact-text">Contact</h1>
             </div>
             <div class="contact-content">
-                <p id="ID">
-                    sahilyadav127@gmail.com
-
-                </p><button onclick="myFunction()">Copy text</button>
+                <button class="button" onclick="myFunction()"><input type="text" value="sahilyadav127@gmail.com" id="ID"></button>
                 <script>
                     function myFunction() {
-                        /* Get the text field */
-                        var copyText = document.getElementById("ID").innerText;
-
-                        /* Select the text field */
+                        var copyText = document.getElementById("ID");
                         copyText.select();
-                        copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-                        /* Copy the text inside the text field */
+                        copyText.setSelectionRange(0, 99999);
                         navigator.clipboard.writeText(copyText.value);
-
-                        /* Alert the copied text */
-                        alert("Copied the text: " + copyText.value);
+                        alert("Copied: " + copyText.value);
                     }
                 </script>
             </div>
@@ -112,6 +134,7 @@
         </div>
     </div>
     <script src="script/script.js"></script>
+    <script src="script/wordMatrix.js"></script>
 </body>
 
 </html>

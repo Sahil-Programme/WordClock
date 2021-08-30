@@ -2,12 +2,12 @@ const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navbarlinks = document.getElementsByClassName('navbar-links')[0];
 const ul = document.getElementById('u-list');
 
-//toggleButton.addEventListener('click', () => {
-//    navbarlinks.classList.toggle('active')
-//})
-//ul.addEventListener('click', () => {
-//    navbarlinks.classList.toggle('active')
-//})
+toggleButton.addEventListener('click', () => {
+    navbarlinks.classList.toggle('active')
+})
+ul.addEventListener('click', () => {
+    navbarlinks.classList.toggle('active')
+})
 
 let currentIndex = 0;
 
@@ -40,8 +40,13 @@ function init_carousel() {
     if (opacityIndex >= maxImages) opacityIndex = opacityIndex - maxImages;
 
     for (var x = 0; x < maxImages; x++) {
+        let width = window.screen.width;
 
-        img[x].style.maxWidth = x == currentIndex ? '375px' : '275px';
+        img[x].style.maxWidth = x == currentIndex ? width > 700 ?
+            '375px' : '300px' :
+            width > 700 ? '275px' :
+            '200px';
+        //img[x].style.maxWidth = x == currentIndex ? '375px' : '275px';
         img[x].style.zIndex =
             x == currentIndex ?
             '100' : x < currentIndex ?
@@ -76,7 +81,12 @@ function update() {
 
     for (var x = 0; x < maxImages; x++) {
 
-        img[x].style.maxWidth = x == currentIndex ? '375px' : '275px';
+        let width = window.screen.width;
+
+        img[x].style.maxWidth = x == currentIndex ? width > 700 ?
+            '375px' : '300px' :
+            width > 700 ? '275px' :
+            '200px';
         img[x].style.zIndex =
             x == currentIndex ?
             '100' : x < currentIndex ?

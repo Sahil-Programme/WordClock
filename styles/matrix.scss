@@ -1,0 +1,38 @@
+.matrix {
+    margin: auto;
+    height: auto;
+    width: auto;
+}
+
+.block {
+    font-family: "Source Code Pro"; //, monospace;
+    font-size: 1.6em;
+    object-fit: inherit;
+    padding: 0;
+    border-width: 0;
+    display: inline-block;
+    line-height: 25px;
+    word-spacing: 10px;
+    letter-spacing: 0.2em;
+    //height: 50;
+    //width: 50;
+    color: rgb(40, 40, 40);
+    transition: color 0.1s;
+}
+
+//.block:hover {
+//    color: rgb(80, 80, 255);
+//}
+.frame {
+    margin-right: 2em;
+    margin-left: 2em;
+    border-style: solid;
+    border-color: rgb(80, 80, 255);
+    border-width: 3;
+    width: max-content;
+    margin: auto;
+}
+
+.center {
+    margin: auto;
+}
