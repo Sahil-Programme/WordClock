@@ -108,42 +108,7 @@ body {
     background-color: #555;
 }
 
-//navbar
-
-/*.navbar {
-    top: 0;
-    background: #202020;
-    margin: auto;
-    max-width: 1500px;
-    position: sticky;
-    z-index: 2000;
-    .logo {
-        margin: 1rem;
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
-        font-size: 1.2em;
-        span {
-            color: var(--primary-color);
-        }
-    }
-    nav {
-        display: block;
-    }
-    .container {
-        display: flex;
-        place-content: space-between;
-        align-items: center;
-        img {
-            margin: 1rem;
-            width: 2em;
-        }
-    }
-    .mobile-menu {
-        cursor: pointer;
-    }
-}*/
-
+// Main content
 .grid {
     background-color: black;
     padding: 0;
@@ -201,6 +166,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top: 3rem;
     .title-text {
         //text-shadow: 4px 4px var(--primary-color);
         z-index: 2;
@@ -238,6 +204,9 @@ body {
     color: var(--primary-color);
     font-family: 'Source Code Pro';
     font-style: normal;
+    span {
+        color: white;
+    }
 }
 
 // About section
@@ -248,6 +217,7 @@ body {
     margin-left: 2rem;
     margin-right: 1rem;
     margin-top: 8rem;
+    padding-top: 3rem;
     align-items: center;
     .about-text,
     .contact-text {
@@ -296,7 +266,8 @@ body {
     }
 }
 
-.animated-image-about {
+
+/*.animated-image-about {
     //border-color: blueviolet;
     //border-style: solid;
     //border-width: 6px;
@@ -314,7 +285,7 @@ body {
         font-family: 'Source Code Pro';
         overflow: hidden;
     }
-}
+}*/
 
 .contact-content {
     color: lightslategrey;
@@ -350,7 +321,7 @@ body {
 @media screen and (max-width: 900px) {
     .heading-div {
         font-size: 2em;
-        height: 3em;
+        height: 5em;
     }
     .about-heading,
     .contact-heading {
@@ -363,7 +334,6 @@ body {
         }
     }
     .about-tag-line {
-        //background-color: limegreen;
         margin-left: 1rem;
         margin-right: 1rem;
         margin-top: 0;
@@ -382,7 +352,7 @@ body {
     }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 600px) {
     .toggle-button {
         display: flex;
     }
@@ -411,7 +381,7 @@ body {
     }
     .heading-div {
         font-size: 1.5em;
-        height: 6em;
+        height: 8em;
     }
     .grid {
         grid-template-columns: 1fr;
@@ -456,7 +426,6 @@ body {
         }
     }
     .about-tag-line {
-        //background-color: limegreen;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
         margin-top: 0;

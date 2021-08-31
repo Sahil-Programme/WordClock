@@ -133,39 +133,6 @@ body ul {
   background-color: #555;
 }
 
-/*.navbar {
-    top: 0;
-    background: #202020;
-    margin: auto;
-    max-width: 1500px;
-    position: sticky;
-    z-index: 2000;
-    .logo {
-        margin: 1rem;
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
-        font-size: 1.2em;
-        span {
-            color: var(--primary-color);
-        }
-    }
-    nav {
-        display: block;
-    }
-    .container {
-        display: flex;
-        place-content: space-between;
-        align-items: center;
-        img {
-            margin: 1rem;
-            width: 2em;
-        }
-    }
-    .mobile-menu {
-        cursor: pointer;
-    }
-}*/
 .grid {
   background-color: black;
   padding: 0;
@@ -266,6 +233,7 @@ body ul {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  padding-top: 3rem;
 }
 
 .heading-div .title-text {
@@ -309,6 +277,10 @@ body ul {
   font-style: normal;
 }
 
+.background-text span {
+  color: white;
+}
+
 .about-heading,
 .contact-heading {
   height: auto;
@@ -318,6 +290,7 @@ body ul {
   margin-left: 2rem;
   margin-right: 1rem;
   margin-top: 8rem;
+  padding-top: 3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -372,29 +345,25 @@ body ul {
   background-color: yellow;
 }
 
-.animated-image-about {
-  margin: 1em 1em 1em 1em;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.animated-image-about p {
-  font-size: 4em;
-  line-height: 0.7em;
-  margin: 0;
-  background-color: teal;
-  font-family: 'Source Code Pro';
-  overflow: hidden;
-}
-
+/*.animated-image-about {
+    //border-color: blueviolet;
+    //border-style: solid;
+    //border-width: 6px;
+    //border-radius: 25px;
+    margin: 1em 1em 1em 1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        font-size: 4em;
+        line-height: 0.7em;
+        margin: 0;
+        background-color: teal;
+        font-family: 'Source Code Pro';
+        overflow: hidden;
+    }
+}*/
 .contact-content {
   color: lightslategrey;
   margin-left: 2rem;
@@ -429,7 +398,7 @@ body ul {
 @media screen and (max-width: 900px) {
   .heading-div {
     font-size: 2em;
-    height: 3em;
+    height: 5em;
   }
   .about-heading,
   .contact-heading {
@@ -462,7 +431,7 @@ body ul {
   }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 600px) {
   .toggle-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -503,7 +472,7 @@ body ul {
   }
   .heading-div {
     font-size: 1.5em;
-    height: 6em;
+    height: 8em;
   }
   .grid {
     -ms-grid-columns: 1fr;

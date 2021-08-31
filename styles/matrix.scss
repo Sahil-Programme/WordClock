@@ -1,31 +1,40 @@
-.matrix {
+#matrix {
+    background-color: #181818;
+    border-style: solid;
+    border-color: rgba(80, 80, 255, 0.1);
+    border-width: 3;
     margin: auto;
-    height: auto;
-    width: auto;
+    width: 80%;
+}
+
+.size {
+    //border-width: 1px;
+    //border-style: solid;
+    //border-color: whitesmoke;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100%/16);
+    height: max-content;
+    overflow: hidden;
 }
 
 .block {
-    font-family: "Source Code Pro"; //, monospace;
-    font-size: 1.6em;
-    object-fit: inherit;
-    padding: 0;
-    border-width: 0;
-    display: inline-block;
-    line-height: 25px;
-    word-spacing: 10px;
-    letter-spacing: 0.2em;
-    //height: 50;
-    //width: 50;
+    font-family: "Source Code Pro", "monospace";
+    width: 100%;
+    height: max-content;
+    font-size: 2.5em;
+    line-height: 0.8em;
+    word-spacing: 0px;
+    letter-spacing: 0em;
     color: rgb(40, 40, 40);
     transition: color 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-//.block:hover {
-//    color: rgb(80, 80, 255);
-//}
 .frame {
-    margin-right: 2em;
-    margin-left: 2em;
     border-style: solid;
     border-color: rgb(80, 80, 255);
     border-width: 3;
@@ -33,6 +42,8 @@
     margin: auto;
 }
 
-.center {
-    margin: auto;
+@media screen and (max-width: 850px) {
+    .block {
+        font-size: 2em;
+    }
 }

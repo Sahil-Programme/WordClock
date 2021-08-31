@@ -1,28 +1,54 @@
-.matrix {
+#matrix {
+  background-color: #181818;
+  border-style: solid;
+  border-color: rgba(80, 80, 255, 0.1);
+  border-width: 3;
   margin: auto;
-  height: auto;
-  width: auto;
+  width: 80%;
+}
+
+.size {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(100%/16);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
 }
 
 .block {
-  font-family: "Source Code Pro";
-  font-size: 1.6em;
-  -o-object-fit: inherit;
-     object-fit: inherit;
-  padding: 0;
-  border-width: 0;
-  display: inline-block;
-  line-height: 25px;
-  word-spacing: 10px;
-  letter-spacing: 0.2em;
+  font-family: "Source Code Pro", "monospace";
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 2.5em;
+  line-height: 0.8em;
+  word-spacing: 0px;
+  letter-spacing: 0em;
   color: #282828;
   -webkit-transition: color 0.1s;
   transition: color 0.1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .frame {
-  margin-right: 2em;
-  margin-left: 2em;
   border-style: solid;
   border-color: #5050ff;
   border-width: 3;
@@ -32,7 +58,9 @@
   margin: auto;
 }
 
-.center {
-  margin: auto;
+@media screen and (max-width: 850px) {
+  .block {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=matrix.css.map */

@@ -16,21 +16,21 @@ var wordMatrix = ["HHAPPYLBIRTHDAYT",
     "COOLCOLDWARMHOTV",
 ];
 
-var str = "<div><h1>";
+var str = '<div><p>';
 
 for (var x = 0; x < 16; x++) {
     for (var y = 0; y < 16; y++) {
-        str += '<span class="block' + ' r' + x.toString(10) + 'c' + y.toString(10) + '"' + '>' + wordMatrix[x][y] + '</span>';
+        str += '<div class="size"><span class="block' + ' r' + x.toString(10) + 'c' + y.toString(10) + '"' + '>' + wordMatrix[x][y] + '</span></div>';
     }
     str += '<br>';
 }
-str += '</h1></div>'
+str += '</p></div>'
 
 var div = document.getElementById('matrix');
 div.innerHTML = str;
 
 addToFrame(2, 0, 2);
-addToFrame(2, 4, 2);
+addToFrame(2, 3, 2);
 addToFrame(4, 8, 5);
 addToFrame(10, 7, 6);
 
