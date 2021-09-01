@@ -16,6 +16,8 @@ var wordMatrix = ["HHAPPYLBIRTHDAYT",
     "COOLCOLDWARMHOTV",
 ];
 
+window.setInterval(update, 1000);
+
 var str = '<div><p>';
 
 for (var x = 0; x < 16; x++) {
@@ -34,6 +36,9 @@ addToFrame(2, 3, 2);
 addToFrame(4, 8, 5);
 addToFrame(10, 7, 6);
 
+function update() {
+    console.log('updated');
+}
 
 function addToFrame(row, col, length) {
     var styles = '';
