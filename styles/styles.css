@@ -498,56 +498,65 @@ body ul {
     height: 8em;
   }
   .grid {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -ms-grid-rows: min-content;
         grid-template-rows: -webkit-min-content;
         grid-template-rows: min-content;
-        grid-template-areas: "title" "carousel" "about-heading" "tag-line" "about-list" "about-image" "download-heading" "android" "ios" "contact-heading" "contact-content" "footer";
+        grid-template-areas: "title title" "carousel carousel" "about-heading about-heading" "tag-line tag-line" "about-list about-list" "about-image about-image" "download-heading download-heading" "android ios" "contact-heading contact-heading" "contact-content contact-content" "footer footer";
   }
   .grid .title-heading {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: title;
   }
   .grid .carousel-container {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: carousel;
   }
   .grid .about-heading {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: about-heading;
   }
   .grid .about-tag-line {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: tag-line;
   }
   .grid .list {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: about-list;
   }
   .grid .animated-image-about {
     -ms-grid-row: 6;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: about-image;
   }
   .grid .contact-heading {
-    -ms-grid-row: 10;
+    -ms-grid-row: 9;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: contact-heading;
   }
   .grid .contact-content {
-    -ms-grid-row: 11;
+    -ms-grid-row: 10;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: contact-content;
   }
   .grid .download-heading {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: download-heading;
   }
   .grid .android {
@@ -556,13 +565,14 @@ body ul {
     grid-area: android;
   }
   .grid .ios {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
     grid-area: ios;
   }
   .grid .footer {
-    -ms-grid-row: 12;
+    -ms-grid-row: 11;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: footer;
   }
   .about-heading,

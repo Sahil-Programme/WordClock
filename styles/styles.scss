@@ -395,9 +395,9 @@ body {
         height: 8em;
     }
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: min-content;
-        grid-template-areas: "title""carousel""about-heading""tag-line""about-list""about-image""download-heading""android""ios""contact-heading""contact-content""footer";
+        grid-template-areas: "title title""carousel carousel""about-heading about-heading""tag-line tag-line""about-list about-list""about-image about-image""download-heading download-heading""android ios""contact-heading contact-heading""contact-content contact-content""footer footer";
         .title-heading {
             grid-area: title;
         }
