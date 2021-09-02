@@ -26,6 +26,7 @@
                     <ul id="u-list">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#download">Download app</a></li>
                         <li><a href="#contact" id="contact-button">Contact</a></li>
                     </ul>
                 </div>
@@ -80,29 +81,29 @@
             <ul class="list">
                 <form name="about_form">
                     <label class="cont">
-                    <li>
-                        <input type="radio" name="about_selector" value="rem" checked="unchecked">
-                        <div class="checkmark">Set reminders</div>
-                    </li>
-                </label>
+                        <li>
+                            <input type="radio" name="about_selector" value="rem" checked="unchecked">
+                            <div class="checkmark">Set reminders</div>
+                        </li>
+                    </label>
                     <label class="cont">
-                    <li>
-                        <input type="radio" name="about_selector" value="col" checked="unchecked">
-                        <div class="checkmark">Change colors as per your preferences</div>
-                    </li>
-                </label>
+                        <li>
+                            <input type="radio" name="about_selector" value="color" checked="unchecked">
+                            <div class="checkmark">Change colors as per your preferences</div>
+                        </li>
+                    </label>
                     <label class="cont">
-                    <li>
-                        <input type="radio" name="about_selector" value="sound" checked="unchecked">
-                        <div class="checkmark">React to the sound around you</div>
-                    </li>
-                </label>
-                    <label class="cont">
+                        <li>
+                            <input type="radio" name="about_selector" value="sound" checked="unchecked">
+                            <div class="checkmark">React to the sound around you</div>
+                        </li>
+                    </label>
+                    <!--label class="cont">
                     <li>
                         <input type="radio" name="about_selector" value="clock" checked="checked">
                         <div class="checkmark">Show Clock</div>
                     </li>
-                </label>
+                </label-->
                 </form>
                 <style>
                     .checkmark {
@@ -118,11 +119,10 @@
                     .cont input {
                         display: none;
                     }
-                    
-                    .cont input:checked+.checkmark {
+                    /*.cont input:checked+.checkmark {
                         color: black;
                         background-color: aqua;
-                    }
+                    }*/
                     
                     @media screen and (max-width: 900px) {
                         .checkmark {
@@ -146,6 +146,20 @@
             <div class="animated-image-about">
                 <div id="matrix"></div>
             </div>
+            <!--Download app section-->
+            <div id="download" class="download-heading">
+                <h1 class="download-text">Download App</h1>
+            </div>
+            <div class="android">
+                <div class="croppng">
+                    <img class="androidImg" src="images/ios-android-logo.png" alt="">
+                </div>
+            </div>
+            <div class="ios">
+                <div class="croppng">
+                    <img class="iosImg" src="images/ios-android-logo.png" alt="">
+                </div>
+            </div>
             <!--Contact section-->
             <div id="contact" class="contact-heading">
                 <h1 class="contact-text">Contact</h1>
@@ -163,6 +177,7 @@
                 </script>
                 <p class="linkedin">linkedin.com/in/sahilyadav127</p>
             </div>
+
             <div class="footer">&#169 2021, Sahil Yadav</div>
         </div>
     </div>

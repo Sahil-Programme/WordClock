@@ -147,7 +147,7 @@ body ul {
   -ms-grid-rows: min-content;
       grid-template-rows: -webkit-min-content;
       grid-template-rows: min-content;
-      grid-template-areas: "title title" "carousel carousel" "about-heading about-heading" "tag-line about-image" "about-list about-image" "contact-heading contact-heading" "contact-content contact-content" "footer footer";
+      grid-template-areas: "title title" "carousel carousel" "about-heading about-heading" "tag-line about-image" "about-list about-image" "download-heading download-heading" "android ios" "contact-heading contact-heading" "contact-content contact-content" "footer footer";
 }
 
 .grid .title-heading {
@@ -191,21 +191,37 @@ body ul {
 }
 
 .grid .contact-heading {
-  -ms-grid-row: 6;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: contact-heading;
 }
 
 .grid .contact-content {
-  -ms-grid-row: 7;
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: contact-content;
 }
 
+.grid .download-heading {
+  grid-area: download=heading;
+}
+
+.grid .android {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: android;
+}
+
+.grid .ios {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: ios;
+}
+
 .grid .footer {
-  -ms-grid-row: 8;
+  -ms-grid-row: 10;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: footer;
@@ -282,7 +298,8 @@ body ul {
 }
 
 .about-heading,
-.contact-heading {
+.contact-heading,
+.download-heading {
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,8 +315,14 @@ body ul {
 
 .about-heading .about-text,
 .about-heading .contact-text,
+.about-heading .download-text,
 .contact-heading .about-text,
-.contact-heading .contact-text {
+.contact-heading .contact-text,
+.contact-heading .download-text,
+.download-heading .about-text,
+.download-heading .contact-text,
+.download-heading .download-text {
+  width: 100%;
   font-size: 5rem;
   color: white;
   text-shadow: 3px 3px var(--primary-color);
@@ -321,44 +344,6 @@ body ul {
   color: white;
 }
 
-/* .list {
-    margin-left: 2rem;
-    margin-right: 1rem;
-    font-size: 2.5em; // 1rem;
-    color: lightslategrey;
-    li {
-        border-radius: 10px;
-    }
-    li:hover {
-        cursor: pointer;
-        color: black;
-        background-color: yellow;
-    }
-    li:active {
-        cursor: pointer;
-        color: black;
-        background-color: yellow;
-    }
-}*/
-/*.animated-image-about {
-    //border-color: blueviolet;
-    //border-style: solid;
-    //border-width: 6px;
-    //border-radius: 25px;
-    margin: 1em 1em 1em 1em;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p {
-        font-size: 4em;
-        line-height: 0.7em;
-        margin: 0;
-        background-color: teal;
-        font-family: 'Source Code Pro';
-        overflow: hidden;
-    }
-}*/
 .contact-content {
   color: lightslategrey;
   margin-left: 2rem;
@@ -384,6 +369,48 @@ body ul {
   font-size: 3em;
 }
 
+.android,
+.ios {
+  margin: auto;
+  margin-top: 1rem;
+  width: 60%;
+  padding-top: 60%;
+  position: relative;
+  background-color: #141414;
+  -webkit-box-shadow: 5px 5px #282828;
+          box-shadow: 5px 5px #282828;
+  cursor: pointer;
+  border-radius: 25px;
+  display: block;
+}
+
+.ios:hover,
+.android:hover {
+  background-color: yellow;
+}
+
+.croppng {
+  position: absolute;
+  top: 15%;
+  right: 16%;
+  height: 70%;
+  width: 62%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.androidImg {
+  height: 100%;
+  position: absolute;
+  right: -135%;
+}
+
+.iosImg {
+  height: 100%;
+  position: absolute;
+  right: 6%;
+}
+
 .footer {
   font-size: 1.2em;
   text-align: center;
@@ -396,15 +423,21 @@ body ul {
     height: 5em;
   }
   .about-heading,
-  .contact-heading {
+  .contact-heading,
+  .download-heading {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 4rem;
   }
   .about-heading .about-text,
   .about-heading .contact-text,
+  .about-heading .download-text,
   .contact-heading .about-text,
-  .contact-heading .contact-text {
+  .contact-heading .contact-text,
+  .contact-heading .download-text,
+  .download-heading .about-text,
+  .download-heading .contact-text,
+  .download-heading .download-text {
     font-size: 3.5rem;
   }
   .about-tag-line {
@@ -470,7 +503,7 @@ body ul {
     -ms-grid-rows: min-content;
         grid-template-rows: -webkit-min-content;
         grid-template-rows: min-content;
-        grid-template-areas: "title" "carousel" "about-heading" "tag-line" "about-list" "about-image" "contact-heading" "contact-content" "footer";
+        grid-template-areas: "title" "carousel" "about-heading" "tag-line" "about-list" "about-image" "download-heading" "android" "ios" "contact-heading" "contact-content" "footer";
   }
   .grid .title-heading {
     -ms-grid-row: 1;
@@ -503,30 +536,51 @@ body ul {
     grid-area: about-image;
   }
   .grid .contact-heading {
-    -ms-grid-row: 7;
+    -ms-grid-row: 10;
     -ms-grid-column: 1;
     grid-area: contact-heading;
   }
   .grid .contact-content {
-    -ms-grid-row: 8;
+    -ms-grid-row: 11;
     -ms-grid-column: 1;
     grid-area: contact-content;
   }
-  .grid .footer {
+  .grid .download-heading {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: download-heading;
+  }
+  .grid .android {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    grid-area: android;
+  }
+  .grid .ios {
     -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    grid-area: ios;
+  }
+  .grid .footer {
+    -ms-grid-row: 12;
     -ms-grid-column: 1;
     grid-area: footer;
   }
   .about-heading,
-  .contact-heading {
+  .contact-heading,
+  .download-heading {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-top: 3rem;
   }
   .about-heading .about-text,
   .about-heading .contact-text,
+  .about-heading .download-text,
   .contact-heading .about-text,
-  .contact-heading .contact-text {
+  .contact-heading .contact-text,
+  .contact-heading .download-text,
+  .download-heading .about-text,
+  .download-heading .contact-text,
+  .download-heading .download-text {
     font-size: 3rem;
   }
   .about-tag-line {

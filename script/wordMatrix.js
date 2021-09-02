@@ -68,33 +68,115 @@ wordPosition_minutes.set(19, [3, 7, 8]);
 wordPosition_minutes.set(20, [2, 6, 6]);
 wordPosition_minutes.set(30, [2, 12, 4]);
 
-window.setInterval(updateTime, 2000);
+window.setInterval(assignFunction, 2000);
+
+const radios = document.forms["about_form"].elements["about_selector"];
+
+var mode = 3;
+var refreshdelay = 0;
+const reminderMode = 0;
+const rgbMode = 1;
+const soundMode = 2;
+const clockMode = 3;
+
+function assignFunction() {
+    if (mode === reminderMode) reminderModeFunction();
+    else if (mode === rgbMode) rgbModeFunction();
+    else if (mode === soundMode) soundModeFunction();
+    else if (mode === clockMode) clockModeFunction();
+}
+
+
+
+/*for (var i = 0, max = radios.length; i < max; i++) {
+    radios[i].onclick = function() {
+        console.log(this.value);
+        if (this.value === 'rem') {
+            refreshdelay = 100;
+            mode = reminderMode;
+        } else if (this.value === 'color') {
+            refreshdelay = 500;
+            mode = rgbMode;
+        } else if (this.value === 'sound') {
+            refreshdelay = 100;
+            mode = soundMode;
+        } else if (this.value === 'clock') {
+            refreshdelay = 1000;
+            mode = clockMode;
+        }
+    }
+}*/
 
 var hour = 0;
 var min = 0;
 
-var str = '<div><p>';
+function initMatrix() {
+    var str = '<div><p>';
 
-for (var x = 0; x < 16; x++) {
-    for (var y = 0; y < 16; y++) {
-        let s = '<div class="size"><span class="block" id="' + 'r' + x.toString(10) + 'c' + y.toString(10) + '"' + '>' + wordMatrix[x][y] + '</span></div>';
-        str += s;
-        //console.log(s);
+    for (var x = 0; x < 16; x++) {
+        for (var y = 0; y < 16; y++) {
+            let s = '<div class="size"><span class="block" id="' + 'r' + x.toString(10) + 'c' + y.toString(10) + '"' + '>' + wordMatrix[x][y] + '</span></div>';
+            str += s;
+        }
+        str += '<br>';
     }
-    str += '<br>';
-}
-str += '</p></div>'
+    str += '</p></div>'
 
-var div = document.getElementById('matrix');
-div.innerHTML = str;
+    var div = document.getElementById('matrix');
+    div.innerHTML = str;
+}
+
+function clockModeFunction() {
+    updateTime();
+}
+var x = false;
+
+function rgbModeFunction() {
+    if (x === false) {
+        x = true;
+        console.log('called');
+        for (var i = 0; i < 16; i++) {
+            for (var j = 0; j < 16; j++) {
+                var elem = document.getElementById('r' + i + 'c' + j);
+                elem.style.transition = 'background-color 0.5s ease-out 3s';
+                elem.style.transitionProperty = 'background-color';
+
+                elem.onmouseover = function() {
+                    this.style.backgroundColor = "blue";
+                }
+                elem.onmouseleave = function() {
+                    this.style.backgroundColor = "transparent";
+                }
+            }
+        }
+    }
+
+}
+
+function reminderModeFunction() {}
+
+function soundModeFunction() {}
 
 function updateTime() {
+
+    // comment this section after debugging
+    min++;
+    if (min === 60) {
+        min = 0;
+        hour++;
+        if (hour === 24) {
+            hour = 0;
+        }
+    }
+    //--------------------------------------*/
 
     let oldH = hour;
     let oldM = min;
     let d = new Date;
-    hour = d.getHours();
-    min = d.getMinutes();
+    // uncomment the following after debugging
+    //hour = d.getHours();
+    //min = d.getMinutes();
+    //---------------------------------------
     updateMatrix();
     if (oldH !== hour || oldM !== min) {
         console.log('h:' + hour + ' : m:' + min);
@@ -292,3 +374,5 @@ function addToFrame([row, col, length]) {
         element.style.color = 'rgb(80, 80, 255)';
     }
 }
+
+initMatrix();

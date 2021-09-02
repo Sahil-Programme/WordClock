@@ -1,13 +1,8 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navbarlinks = document.getElementsByClassName('navbar-links')[0];
 const ul = document.getElementById('u-list');
-const radios = document.forms["about_form"].elements["about_selector"];
 
-for (var i = 0, max = radios.length; i < max; i++) {
-    radios[i].onclick = function() {
-        console.log(this.value);
-    }
-}
+window.setInterval(update, 3000);
 
 toggleButton.addEventListener('click', () => {
     navbarlinks.classList.toggle('active')
@@ -30,14 +25,6 @@ let img = [
 ];
 
 let maxImages = img.length;
-
-//let img1 = document.getElementById("img1");
-//let img2 = document.getElementById("img2");
-//let img3 = document.getElementById("img3");
-//let img4 = document.getElementById("img4");
-//let img5 = document.getElementById("img5");
-
-window.setInterval(update, 3000);
 
 init_carousel();
 
