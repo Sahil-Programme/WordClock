@@ -159,7 +159,7 @@ function soundModeFunction() {}
 
 function updateTime() {
 
-    // comment this section after debugging
+    /*/ comment this section after debugging
     min++;
     if (min === 60) {
         min = 0;
@@ -174,8 +174,8 @@ function updateTime() {
     let oldM = min;
     let d = new Date;
     // uncomment the following after debugging
-    //hour = d.getHours();
-    //min = d.getMinutes();
+    hour = d.getHours();
+    min = d.getMinutes();
     //---------------------------------------
     updateMatrix();
     if (oldH !== hour || oldM !== min) {
