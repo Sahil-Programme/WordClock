@@ -78,34 +78,74 @@
                 A <span>premium clock</span> you need that does it all.
             </p>
             <ul class="list">
-                <li>Set reminders</li>
+                <form name="about_form">
+                    <label class="cont">
+                    <li>
+                        <input type="radio" name="about_selector" value="rem" checked="unchecked">
+                        <div class="checkmark">Set reminders</div>
+                    </li>
+                </label>
+                    <label class="cont">
+                    <li>
+                        <input type="radio" name="about_selector" value="col" checked="unchecked">
+                        <div class="checkmark">Change colors as per your preferences</div>
+                    </li>
+                </label>
+                    <label class="cont">
+                    <li>
+                        <input type="radio" name="about_selector" value="sound" checked="unchecked">
+                        <div class="checkmark">React to the sound around you</div>
+                    </li>
+                </label>
+                    <label class="cont">
+                    <li>
+                        <input type="radio" name="about_selector" value="clock" checked="checked">
+                        <div class="checkmark">Show Clock</div>
+                    </li>
+                </label>
+                </form>
+                <style>
+                    .checkmark {
+                        margin: 1rem;
+                        padding: 0.5rem;
+                        color: lightslategrey;
+                        background-color: transparent;
+                        border-radius: 10px;
+                        font-size: 2.5em;
+                        font-size: 2.5em;
+                    }
+                    
+                    .cont input {
+                        display: none;
+                    }
+                    
+                    .cont input:checked+.checkmark {
+                        color: black;
+                        background-color: aqua;
+                    }
+                    
+                    @media screen and (max-width: 900px) {
+                        .checkmark {
+                            margin: 0.5rem;
+                            font-size: 2em;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 600px) {
+                        .checkmark {
+                            margin: 0.5rem;
+                            font-size: 1.5em;
+                        }
+                    }
+                </style>
+                <!--li>Set reminders</li>
                 <li>Change colors as per your preferences</li>
                 <li>React to the sound around you</li>
-                <li>Show Clock</li>
+                <li>Show Clock</li-->
             </ul>
             <div class="animated-image-about">
                 <div id="matrix"></div>
             </div>
-            <!--div id="matrix" class="animated-image-about">
-                <p>HHAPPYLBIRTHDAYT
-                    <br>CFJKXCHARLYUIWZT
-                    <br>ITVISYTWENTYHALF
-                    <br>ONELEVENINETEENC
-                    <br>TWELVESIXTEENTEN
-                    <br>THIRTEENEIGHTEEN
-                    <br>FOURTEENTWOVFIVE
-                    <br>QUARTERSEVENTEEN
-                    <br>THREEHPASTOUFIVE
-                    <br>FOURTWELVEIGHTEN
-                    <br>NINEFIVESIXTHREE
-                    <br>TWONELEVENSEVENT
-                    <br>OCLOCKFINATHESTX
-                    <br>EVENINGAFTERNOON
-                    <br>MORNINGNIGHTIAND
-                    <br>COOLCOLDWARMHOTV
-                    <br>
-                </p>
-            </div-->
             <!--Contact section-->
             <div id="contact" class="contact-heading">
                 <h1 class="contact-text">Contact</h1>

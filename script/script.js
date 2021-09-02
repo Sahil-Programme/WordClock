@@ -1,6 +1,13 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navbarlinks = document.getElementsByClassName('navbar-links')[0];
 const ul = document.getElementById('u-list');
+const radios = document.forms["about_form"].elements["about_selector"];
+
+for (var i = 0, max = radios.length; i < max; i++) {
+    radios[i].onclick = function() {
+        console.log(this.value);
+    }
+}
 
 toggleButton.addEventListener('click', () => {
     navbarlinks.classList.toggle('active')

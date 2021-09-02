@@ -68,10 +68,10 @@ wordPosition_minutes.set(19, [3, 7, 8]);
 wordPosition_minutes.set(20, [2, 6, 6]);
 wordPosition_minutes.set(30, [2, 12, 4]);
 
-window.setInterval(updateTime, 1000);
+window.setInterval(updateTime, 2000);
 
-var hour;
-var min;
+var hour = 0;
+var min = 0;
 
 var str = '<div><p>';
 
@@ -89,6 +89,7 @@ var div = document.getElementById('matrix');
 div.innerHTML = str;
 
 function updateTime() {
+
     let oldH = hour;
     let oldM = min;
     let d = new Date;
@@ -112,7 +113,7 @@ function clearMatrix() {
 
 function updateMatrix() {
     clearMatrix();
-    if (!((hour === 0 && minute === 0) || (hour === 12 && minute === 0))) {
+    if (!((hour === 0 && min === 0) || (hour === 12 && min === 0))) {
         if (min === 0) {
             //addToFrame(wordPosition_words['oclock']);
         }
@@ -122,7 +123,7 @@ function updateMatrix() {
         addToFrame(wordPosition_words.get('at'));
         addToFrame(wordPosition_words.get('night'));
     } else if (hour >= 4 && hour < 12) {
-        if (!((hour == 0 && minute == 0) || (hour == 12 && minute == 0))) {
+        if (!((hour == 0 && min == 0) || (hour == 12 && min == 0))) {
             addToFrame(wordPosition_words.get('in'));
             addToFrame(wordPosition_words.get('the'));
             addToFrame(wordPosition_words.get('morning'));
@@ -132,7 +133,7 @@ function updateMatrix() {
         addToFrame(wordPosition_words.get('the'));
         addToFrame(wordPosition_words.get('afternoon'));
     } else if (hour >= 16 && hour <= 21) {
-        if (!((hour == 0 && minute == 0) || (hour == 12 && minute == 0))) {
+        if (!((hour == 0 && min == 0) || (hour == 12 && min == 0))) {
             addToFrame(wordPosition_words.get('in'));
             addToFrame(wordPosition_words.get('the'));
             addToFrame(wordPosition_words.get('evening'));
@@ -291,15 +292,3 @@ function addToFrame([row, col, length]) {
         element.style.color = 'rgb(80, 80, 255)';
     }
 }
-
-/*function addToFrame(row, col, length) {
-    var styles = '';
-    for (var x = col; x < (col + length); x++) {
-        styles += `.r` + row.toString(10) + `c` + x.toString(10) + ` {
-        color: rgb(80, 80, 255);
-      }`
-    }
-    var styleSheet = document.createElement("style")
-    styleSheet.innerText += styles
-    document.head.appendChild(styleSheet)
-}*/
