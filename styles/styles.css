@@ -111,6 +111,11 @@ body ul {
   list-style: none;
 }
 
+#contact-button {
+  border-radius: 10px;
+  background-color: blue;
+}
+
 .navbar-links ul {
   margin: 0;
   padding: 0;
@@ -130,7 +135,14 @@ body ul {
 }
 
 .navbar-links li:hover {
+  border-radius: 10px;
   background-color: #555;
+}
+
+#contact-button:hover {
+  border-radius: 10px;
+  background-color: white;
+  color: blue;
 }
 
 .grid {
@@ -322,6 +334,9 @@ body ul {
 .download-heading .about-text,
 .download-heading .contact-text,
 .download-heading .download-text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   font-size: 5rem;
   color: white;
@@ -344,12 +359,47 @@ body ul {
   color: white;
 }
 
-.contact-content {
-  color: lightslategrey;
+.button-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: left;
+}
+
+.information {
   margin-left: 2rem;
-  margin-right: 1rem;
-  margin-top: 0;
-  font-size: 2.5em;
+  font-size: 1rem;
+  color: slategrey;
+}
+
+.contact-content button {
+  cursor: pointer;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  color: lightslategrey;
+  padding: 0;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border: none;
+  border: 2px solid transparent;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.contact-content button:hover {
+  border-radius: 10px;
+  border: 2px solid yellow;
+}
+
+.contact-content button p {
+  padding: 0.5rem;
+  padding-left: 0;
+  margin: 0;
+  font-size: 2rem;
+  border: none;
 }
 
 .button {
@@ -419,7 +469,9 @@ body ul {
 .footer {
   font-size: 1.2em;
   text-align: center;
-  margin: 2em;
+  margin-top: 2em;
+  padding: 3rem;
+  background-color: #1e1e1e;
 }
 
 @media screen and (max-width: 900px) {
@@ -451,11 +503,17 @@ body ul {
     margin-top: 0;
     font-size: 2em;
   }
-  .contact-content {
+  .information {
+    margin-left: 1.5rem;
+  }
+  .contact-content button {
+    margin: 0.25rem;
     margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 0;
-    font-size: 2em;
+    margin-top: 1.5rem;
+  }
+  .contact-content button p {
+    padding: 0.25rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -604,11 +662,16 @@ body ul {
     margin-top: 0;
     font-size: 1.5em;
   }
-  .contact-content {
+  .information {
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-top: 0;
-    font-size: 1.5em;
+  }
+  .contact-content button {
+    margin: 0.25rem;
+    margin-top: 1rem;
+  }
+  .contact-content button p {
+    padding: 0.25rem;
+    font-size: 1rem;
   }
   #ID {
     font-size: 1.5em;

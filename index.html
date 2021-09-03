@@ -165,18 +165,23 @@
                 <h1 class="contact-text">Contact</h1>
             </div>
             <div class="contact-content">
-                <p class="linkedin">sahilyadav127@gmail.com</p>
-                <!--button class="button" onclick="myFunction()"><input type="text" value="sahilyadav127@gmail.com" id="ID"></button>
+                <p class="information">Click to copy</p>
+                <div class="button-container">
+                    <button onclick="clickToCopy('email')"><p id="email">sahilyadav127@gmail.com</p></button>
+                    <button onclick="clickToCopy('linkedin')"><p id="linkedin">linkedin.com/in/sahilyadav127</p></button>
+                </div>
                 <script>
-                    function myFunction() {
-                        var copyText = document.getElementById("ID");
-                        copyText.select();
-                        copyText.setSelectionRange(0, 99999);
-                        navigator.clipboard.writeText(copyText.value);
-                        //alert("Copied: " + copyText.value);
+                    function clickToCopy(id) {
+                        var text = document.getElementById(id).innerText;
+                        var elem = document.createElement("textarea");
+                        document.body.appendChild(elem);
+                        elem.value = text;
+                        elem.select();
+                        document.execCommand("copy");
+                        document.body.removeChild(elem);
+                        alert("Copied to clipboard");
                     }
-                </script-->
-                <p class="linkedin">linkedin.com/in/sahilyadav127</p>
+                </script>
             </div>
 
             <div class="footer">&#169 2021, Sahil Yadav</div>
