@@ -384,6 +384,10 @@ body ul {
   display: block;
 }
 
+.ios {
+  cursor: not-allowed;
+}
+
 .ios:hover,
 .android:hover {
   background-color: yellow;
@@ -399,13 +403,14 @@ body ul {
   overflow: hidden;
 }
 
-.androidImg {
+.iosImg {
+  cursor: not-allowed;
   height: 100%;
   position: absolute;
   right: -135%;
 }
 
-.iosImg {
+.androidImg {
   height: 100%;
   position: absolute;
   right: 6%;
