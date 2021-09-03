@@ -134,7 +134,6 @@ var x = false;
 function rgbModeFunction() {
     if (x === false) {
         x = true;
-        console.log('called');
         for (var i = 0; i < 16; i++) {
             for (var j = 0; j < 16; j++) {
                 var elem = document.getElementById('r' + i + 'c' + j);
@@ -179,7 +178,7 @@ function updateTime() {
     //---------------------------------------
     updateMatrix();
     if (oldH !== hour || oldM !== min) {
-        console.log('h:' + hour + ' : m:' + min);
+        //console.log('h:' + hour + ' : m:' + min);
         //updateMatrix();
     }
 }

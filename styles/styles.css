@@ -432,6 +432,8 @@ body ul {
   cursor: pointer;
   border-radius: 25px;
   display: block;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .ios {
